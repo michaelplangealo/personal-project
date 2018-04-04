@@ -1,0 +1,53 @@
+ul {
+    padding: 0;
+
+}
+
+.Accordion-container {
+    background-color: #fff;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.Accordion-title,
+.Accordion-content h2 {
+    text-transform: uppercase;    
+}
+
+.Accordion-content p {
+    font-size: 14px;
+    font-family: 'Playfair Display', serif;    
+    text-transform: none;
+    line-height: 2;
+    color: #8D8F8F;
+    letter-spacing: 1px;    
+}
+
+.Accordion-item {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    list-style: none; 
+    border-bottom: 1px solid #ccc;
+    cursor: pointer; 
+    padding: 1.5px 0;  
+    padding-left: 18px; 
+}
+
+.Accordion-title {
+
+    color: #444;
+}
+
+.Accordion-title h5,
+.Accordion-content h2 {
+    font-weight: 300;
+}
+
+.Border {
+    border-bottom: 1px solid #ccc;
+}

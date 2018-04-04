@@ -1,0 +1,54 @@
+.Container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.Footer-row {
+    margin-top: 50px;
+    padding: 20px 0;
+    background-color: #000;
+}
+
+.Main-footer {
+    list-style: none;
+    display: flex;
+}
+
+.Main-footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.Facebook,
+.Twitter,
+.Pinterest {
+    width: 32px;
+    margin-right: 40px;
+}
+
+.Facebook,
+.Instagram {
+    background-color: #fff;
+}
+
+.Twitter {
+    background-color: #fff;    
+}
+
+.Instagram {
+    width: 37px;
+}
+
+.Pinterest {
+    width: 30px;
+}
+
+.Copyright {
+    color: #444;        
+    margin-top: -16px;
+    background-color: #f1f1f1;
+    font-size: 13px;
+    font-family: 'Playfair Display', serif;  
+    text-align: center;
+    padding: 15px;  
+}

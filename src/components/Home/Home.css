@@ -1,0 +1,232 @@
+.Main-home {
+    width: 100vw;
+    position: absolute;
+    z-index: -1; 
+}
+
+.Main-intro {
+    margin-top: 50px;
+}
+
+.Tagline,
+.Slider-header {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    text-align: center;
+}
+
+.Tagline {
+    text-transform: uppercase;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+.Tag-paragraph,
+.Slider-body,
+.Read-more {
+    font-family: 'Playfair Display', serif;
+    color: #8D8F8F;
+    font-size: 13px;
+    text-align: center;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+
+.Intro {
+    margin-top: -35vh;
+    position: relative;
+}
+
+.Header-pic-2 {
+    display: none;
+}
+
+@media (min-width: 360px) {
+    .Intro {
+        margin-top: -30vh;
+        padding: 0 30px;
+    }
+
+    .Header-pic {
+        display: none;
+    }
+
+    .Header-pic-2 {
+        width: 100%;
+        display: block;
+    }
+}
+
+.Container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.Button-primary {
+    color: #000;
+    margin-top: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #e69b26;
+    width: 30vw;
+    left: 30%;
+    position: absolute;
+    padding: 15px 20px;
+}
+
+.Logo-scroll {
+    margin-top: 150px;
+    display: flex;
+    overflow: scroll;
+    padding: 0;
+}
+
+.Tabs-content {
+    background-color: #f1f1f1;
+    padding: 1px 5px;
+    margin-top: -15px;
+}
+
+.Tabs-panel {
+    font-size: 39px;
+    font-family: 'Crimson Text', serif;
+    font-style: italic;
+    text-align: center;
+}
+
+.Logo-scroll {
+    list-style-type: none;
+    padding-bottom: 20px;
+}
+
+.Bk-img {
+    height: 430px;
+    margin-top: -15.5px;
+    background: url('../../assets/bg-mobile-acae.jpg') no-repeat center;
+    background-size: cover;
+    position: relative;
+}
+
+@media (min-width: 360px) {
+    
+
+    .Bk-img-2 {
+        height: 500px;
+        background: url('../../assets/bg-mobile-acae-2.jpg') no-repeat center;
+        background-size: cover;
+        position: relative;
+    }
+}
+
+.Bk-font {
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;   
+    font-size: 26px;
+    top: 50px;
+}
+
+.Bk-font,
+.Bk-text {
+    position: absolute;
+    left: 20px;
+    text-align: center;
+}
+
+.Bk-text {
+    font-size: 13px;
+    top: 133px;
+    font-family: 'Playfair Display', serif;
+    color: #8D8F8F;
+    letter-spacing: 1px;
+    line-height: 2;
+}
+
+.Bk-btn {
+    color: #000;
+    font-size: 13px;
+    position: relative;
+    left: 30%;
+    top: 260px;
+    border: 2px solid black;
+    text-decoration: none;
+    padding: 4.5% 6%;
+    text-transform: uppercase;
+}
+
+.Link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.Logo-flex {
+    display: flex;
+    width: 65%;
+    margin: 0 auto;    
+}
+
+.Avail {
+    font-size: 26px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.Pad {
+    padding: 25px 0;
+}
+
+.Store-width {
+    width: 71px;
+    height: 24px;
+    padding: 0 15px;
+}
+
+.Center {
+    text-align: center;
+}
+
+.Sans-font {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.Advice {
+    font-size: 13px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 15px 0;
+    margin-top: 60px;
+}
+
+.Bc93 {
+    width: 138px;
+    height: 19.44px;
+    margin-top: 40px;
+    margin-left: 75px;
+    margin-bottom: 35px;
+}
+
+.Font-size {
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.Read-more {
+    font-size: 11px;
+    margin: 40px 0 60px;
+    text-decoration: none;  
+    letter-spacing: 1.5px; 
+    padding-bottom: 40px;
+}
+
+.Read-more a {
+    padding-bottom: 400px;     
+}

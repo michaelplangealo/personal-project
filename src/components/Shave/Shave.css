@@ -1,0 +1,34 @@
+.Img-width {
+    width: 100%;
+}
+
+.Container {
+    width: 90%;
+}
+
+.Img-width-body {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.Margin-top {
+    margin-top: 52px;
+}
+
+.Open-sans-header,
+.Open-sans-italic {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+.Open-sans-header {
+    font-size: 20px;
+    text-transform: uppercase;    
+}
+
+.Open-sans-italic {
+    color: #737277;
+    font-style: italic;
+    font-size: 13px;
+}

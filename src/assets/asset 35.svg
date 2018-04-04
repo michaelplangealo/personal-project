@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 20 20" version="1.1" class="menu-close">
+    <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs/>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Email-capture" transform="translate(-1152.000000, -119.000000)" fill="#42334C">
+            <g id="close" transform="translate(1161.970563, 128.970563) rotate(45.000000) translate(-1161.970563, -128.970563) translate(1149.970563, 116.970563)">
+                <path d="M13,11 L13,0 L11,0 L11,11 L-1.13686838e-13,11 L-1.13686838e-13,13 L11,13 L11,24 L13,24 L13,13 L24,13 L24,11 L13,11 Z" id="Combined-Shape"/>
+            </g>
+        </g>
+    </g>
+</svg>
