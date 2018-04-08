@@ -1,7 +1,8 @@
 .Main-header {
     width: 100%;
     position: fixed; 
-    background-color: rgba(0, 0, 0, .8);       
+    background-color: rgba(0, 0, 0, .8);     
+    z-index: 10000;  
 }
 
 @media (min-width: 768px) {

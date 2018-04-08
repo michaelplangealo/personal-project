@@ -1,0 +1,73 @@
+.Padding-top {
+    padding-top: 51px;
+}
+
+.Centered {
+    text-align: center;
+}
+
+.Set-block {
+    display: block;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #CCCFCF;
+}
+
+input {
+    font-size: 12px;
+    outline: none;
+    font-family: 'Playfair Display', serif;  
+    width: 90%;  
+    margin: 0 auto;
+}
+
+.Input-center {
+    padding: 15px;
+    color: #8D8F8F;
+}
+
+.Open-sans-font {
+    font-size: 20px;
+    padding-top: 50px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;    
+}
+
+.Form-style{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.Facebook-btn {
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;  
+    color: #fff;
+    background-color: #5f7bb9;
+    border: none;
+    outline: none;
+    padding: 12px 45px;
+}
+
+.Signin-btn {
+    font-size: 14px;
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;  
+    background-color: #e69b26;
+    border: none;
+    outline: none;
+    padding: 12px 45px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.Register-btn {
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 51px;
+    background-color: none;
+    border: none;
+}

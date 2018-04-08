@@ -23,6 +23,7 @@
 }
 
 .Open-sans-header {
+    color: #000;
     font-size: 20px;
     text-transform: uppercase;    
 }
@@ -31,4 +32,8 @@
     color: #737277;
     font-style: italic;
     font-size: 13px;
+}
+
+.No-underline a {
+    text-decoration: none;
 }

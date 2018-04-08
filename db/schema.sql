@@ -12,8 +12,8 @@ CREATE TABLE products (
     price money
 );
 
-CREATE TABLE users (
-    id serial PRIMARY KEY,
-    authid VARCHAR(40),
-    user_name VARCHAR(40)
+CREATE TABLE cart (
+    id serial PRIMARY key,
+    product_id INTEGER REFERENCES products(id),
+    user_id INTEGER REFERENCES users(id)
 );

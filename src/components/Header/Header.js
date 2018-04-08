@@ -41,7 +41,7 @@ class Header extends Component {
                   <li className="Sub-list-items">Interviews</li>
                 </ul>
               </li>
-              <li className="Sub-list-items Line_under"><a href="http://localhost:3001/login">Sign In</a></li>
+              <li className="Sub-list-items Line_under"><Link to='/login'>Sign In</Link></li>
             </ul>
         </div>
       );

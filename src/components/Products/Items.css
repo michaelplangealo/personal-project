@@ -1,0 +1,45 @@
+.Open-sans-header {
+    font-size: 26px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.Playfair-body {
+    font-size: 13px;
+    font-family: 'Playfair Display', serif;
+    color: #8D8F8F;
+    text-align: center;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+
+.Testimonial-header {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-style: italic;        
+    font-size: 21px;
+}
+
+.Testimonial-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;    
+    color: #8D8F8F;    
+}
+
+.Add-to-cart {
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;    
+    background-color: #e69b26;
+    padding: 15px 60px;
+    border: none;
+    margin-bottom: 35px;
+    outline: 0;
+}
+
+/* .Container {
+    width: 80%;
+    margin: 0 auto;
+} */
