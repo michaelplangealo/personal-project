@@ -10,6 +10,7 @@ import "react-image-gallery/styles/css/image-gallery.css";
 import videostill from  '../../assets/video-still.jpg';
 import {connect} from 'react-redux';
 import {getProducts} from '../../redux/products';
+import {addToCart} from '../../redux/cart';
 
 class RestoringBalm extends Component {
     constructor(props) {
@@ -30,8 +31,7 @@ class RestoringBalm extends Component {
     }
 
     addToCart(id) {
-        axios.post(`/api/cart/${id}`)
-            .then(response => console.log(response))
+        this.props.addToCart(id);
     }
 
     render() {
@@ -56,7 +56,7 @@ class RestoringBalm extends Component {
                         <p className="Playfair-body">{item.item_description}</p>
             
                         <button 
-                        onClick={() => this.addToCart(this.props.products[i].id)} 
+                        onClick={() => this.addToCart(this.props.products.id)} 
                         className="Add-to-cart">Add To Cart</button>                     
                     </div>
                   ) : null
@@ -135,8 +135,9 @@ class RestoringBalm extends Component {
 
 const mapStateToProps = state => {
     return {
-        ...state.productReducer
+        ...state.productReducer,
+        ...state.cartReducer
     }
 }
 
-export default connect(mapStateToProps, {getProducts})(RestoringBalm);
+export default connect(mapStateToProps, {getProducts, addToCart})(RestoringBalm);

@@ -4,7 +4,6 @@ const ADD_TO_CART = 'ADD_TO_CART';
 
 const initialState = {
     cart: [],
-    cartSize: 0,
     loading: false
 }
 
@@ -20,8 +19,7 @@ export default function cartReducer(state = initialState, action) {
             return {
                 ...state,
                 loading: false,
-                cart: action.payload,
-                cartSize: Array.isArray(action.payload) ? action.payload.length : 0
+                cart: action.payload
             }
 
         default:
@@ -33,7 +31,7 @@ export function addToCart(id) {
     return {
         type: ADD_TO_CART,
         payload: axios.post(`/api/cart/${id}`)
-        .then(response => response.data)
+        .then(response => console.log(response))
         .catch(err => err)
     };
 }
