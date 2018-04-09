@@ -31,7 +31,7 @@ class RestoringBalm extends Component {
     }
 
     addToCart(id) {
-        this.props.addToCart(id);
+        addToCart(id);
     }
 
     render() {
@@ -56,7 +56,7 @@ class RestoringBalm extends Component {
                         <p className="Playfair-body">{item.item_description}</p>
             
                         <button 
-                        onClick={() => this.addToCart(this.props.products.id)} 
+                        onClick={() =>  this.props.addToCart} 
                         className="Add-to-cart">Add To Cart</button>                     
                     </div>
                   ) : null

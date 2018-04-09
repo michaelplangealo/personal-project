@@ -1,6 +1,7 @@
 const addToCart = (req, res) => {
   req.session.cart = req.params.id
   res.status(200).json(req.session.cart)
+  console.log(req.session.cart)
 };
 
 module.exports = {

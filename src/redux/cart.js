@@ -31,7 +31,7 @@ export function addToCart(id) {
     return {
         type: ADD_TO_CART,
         payload: axios.post(`/api/cart/${id}`)
-        .then(response => console.log(response))
+        .then(response => response.data)
         .catch(err => err)
     };
 }
