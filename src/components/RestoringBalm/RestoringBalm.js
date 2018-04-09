@@ -56,7 +56,7 @@ class RestoringBalm extends Component {
                         <p className="Playfair-body">{item.item_description}</p>
             
                         <button 
-                        onClick={() =>  this.props.addToCart} 
+                        onClick={() =>  this.props.addToCart(item)} 
                         className="Add-to-cart">Add To Cart</button>                     
                     </div>
                   ) : null
