@@ -30,7 +30,11 @@ export default function cartReducer(state = initialState, action) {
 export function addToCart(id) {
     return {
         type: ADD_TO_CART,
-        payload: axios.post(`/api/cart/${id}`)
+        payload: axios.post(`/api/cart`, {
+            id: id.id,
+            item_name: id.item_name,
+            price: id.price
+            })
         .then(response => console.log(response))
         .catch(err => err)
     };

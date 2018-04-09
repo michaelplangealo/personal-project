@@ -37,7 +37,7 @@ const setupSchema = (req, res, next) => {
 
 app.get('/api/products', getProducts);
 // app.get('/api/cart'), (req, res, next) => 
-app.post('/api/cart/:id', addToCart);
+app.post('/api/cart', addToCart);
 app.put('/api/login', passwordChecker);
 app.put('/api/register', accountCreation);
 app.get('/logout', logout);

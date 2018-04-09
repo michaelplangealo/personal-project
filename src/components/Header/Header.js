@@ -52,7 +52,7 @@ class Header extends Component {
         <div className="Main-nav Container">
           <a onClick={this.toggleMenu}><img src={hamburger} className="Main-menu" alt="hamburger-menu" /></a>
           <a href="/"><img src={logo} className="Main-logo" alt="logo" /></a>
-          <img src={cart} className="Main-cart" alt="cart" />
+          <Link to="/cart"><img src={cart} className="Main-cart" alt="cart" /></Link>
         </div>
         <div className="Main-nav-2">
           <a href="/"><img src={logo} className="Main-logo" alt="logo" /></a>
