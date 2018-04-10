@@ -1,49 +1,50 @@
 require('dotenv').config();
 const express = require('express');
-const bodyParser = require('body-parser');
+const {json} = require('body-parser');
 const cors = require('cors');
 const massive = require('massive');
 const session = require('express-session');
-const { getProducts } = require(`${__dirname}/controller/products`); 
-const { addToCart } = require(`${__dirname}/controller/cart`);
-const { getUser, logout } = require(`${__dirname}/controller/users`);
-const {accountCreation, passwordChecker} = require(`${__dirname}/controller/bcrypt`);
+
+const users = require('./controller/users');
+const cart = require('./controller/cart');
+const products = require('./controller/products');
+const stripeCharge = require('./routes/payment');
+
+const {
+    CONNECTION_STRING,
+    STRIPE_SECRET
+} = process.env;
 
 const bcrypt = require ('bcrypt');
 
 const app = express();
-app.use(bodyParser.json());
+
+app.use(json());
 app.use(cors());
 app.set("bcrypt", bcrypt);
 
-app.use( session({
-    secret: process.env.CONNECTION_STRING,
-    resave: false, //optional
-    saveUninitialized: true, //optional
-    expires: 2592000000
-}));
+app.use( 
+    session({
+        secret: CONNECTION_STRING,
+        resave: false, 
+        saveUninitialized: false
+    })
+);
 
-massive(process.env.CONNECTION_STRING).then( db => {
+massive(CONNECTION_STRING).then( db => {
     app.set( 'db', db);
 }).catch( err => console.log( err ));
 
-const setupSchema = (req, res, next) => {
-    req.app
-      .get('db')
-      .schema()
-      .then(response => res.status(200).json(response))
-      .catch(err => res.status(500).json(err));
-};
+app.get('/api/products', products.getProducts);
+app.get('/api/cart', cart.getCart);
+app.post('/api/cart', cart.addToCart);
+app.put('/api/login', users.login);
+app.put('/api/register', users.register);
+app.post('/api/payment', stripeCharge);
+// app.get('/logout', logout);
+// app.get('/api/me', getUser);
 
-app.get('/api/products', getProducts);
-// app.get('/api/cart'), (req, res, next) => 
-app.post('/api/cart', addToCart);
-app.put('/api/login', passwordChecker);
-app.put('/api/register', accountCreation);
-app.get('/logout', logout);
-app.get('/api/me', getUser);
-
-const port = 3001;
+const port = process.env.PORT || 3001;
 
 app.listen(port, () => {
     console.log(`Listening on port ${port}`)

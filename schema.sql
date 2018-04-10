@@ -1,4 +1,4 @@
-CREATE TABLE cart (
+CREATE TABLE users (
     id serial primary key,
     item_name varchar(60),
     price money

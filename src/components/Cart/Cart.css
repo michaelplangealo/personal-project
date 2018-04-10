@@ -1,0 +1,74 @@
+.Item-container {
+    width: 90vw;
+    margin: 0 auto;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+    align-content: stretch;
+    padding-top: 40px;
+}
+
+
+.Pic-resize {
+    width: 25%;
+}
+
+.Total {
+    padding-top: 51px;
+}
+
+.Total-container {
+    width: 70%;
+    margin: 0 auto;
+    font-size: 12px;
+    font-family: 'Playfair Display', serif;
+    color: #8D8F8F;
+    letter-spacing: 1px;
+    line-height: 2;
+    padding-bottom: 20px;
+}
+
+.Shopping-btn {
+    font-size: 14px;  
+    text-align: center;  
+    font-family: 'Playfair Display', serif;
+    color: #8D8F8F;
+    letter-spacing: 1px;
+    line-height: 2;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #000;
+    width: 90%;
+    margin: 0 auto;
+    text-decoration: none;
+}
+
+.Checkout-btn-container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #e69b26;
+    text-align: center;
+    padding: 13px;
+    margin-bottom: 15px;
+}
+
+.Checkout-btn {
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+.Item-name {
+    width: 30vw;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.Item-price {
+    width: 30vw;
+    color: #8D8F8F;
+    font-size: 16px;
+    font-family: 'Playfair Display', serif;    
+}

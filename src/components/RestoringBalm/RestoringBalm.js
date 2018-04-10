@@ -52,9 +52,8 @@ class RestoringBalm extends Component {
                   item.item_name === "Restoring Balm" ? (
                     <div className="Container" key={i}>
                         <h1 className="Open-sans-header">{item.item_name}</h1>
-                        <p className="Playfair-body">{item.price}</p>
+                        <p className="Playfair-body">{`$${item.price}`}</p>
                         <p className="Playfair-body">{item.item_description}</p>
-            
                         <button 
                         onClick={() =>  this.props.addToCart(item)} 
                         className="Add-to-cart">Add To Cart</button>                     

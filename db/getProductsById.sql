@@ -1,0 +1,1 @@
+SELECT * FROM products WHERE item_name = $1;

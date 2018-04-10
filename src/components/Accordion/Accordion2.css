@@ -75,3 +75,21 @@ ul {
 .Margin-bottom-2 {
     margin-bottom: 10px;
 }
+
+.Resize-pic {
+    width: 100%;
+}
+
+.Description-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.Yellow-btn {
+    font-size: 14px;
+    text-transform: uppercase;
+    background-color: #e69b26;
+    border: none;
+    padding: 15px 30px;
+    margin-bottom: 50px;
+}

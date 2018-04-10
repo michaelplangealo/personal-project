@@ -10,7 +10,7 @@ import "react-image-gallery/styles/css/image-gallery.css";
 import videostill from  '../../assets/video-still.jpg';
 import {connect} from 'react-redux';
 import {getProducts} from '../../redux/products';
-// import {addToCart} from '../../redux/cart';
+import {addToCart} from '../../redux/cart';
 
 class Blades extends Component {
     constructor(props) {
@@ -31,8 +31,7 @@ class Blades extends Component {
     }
 
     addToCart(id) {
-        axios.post(`/api/cart/${id}`)
-            .then(response => console.log(response))
+        addToCart(id);
     }
 
     toggleAccordion1 = () => {
@@ -102,9 +101,8 @@ class Blades extends Component {
                         <h1 className="Open-sans-header">{item.item_name}</h1>
                         <p className="Playfair-body">{item.price}</p>
                         <p className="Playfair-body">{item.item_description}</p>
-            
                         <button 
-                        onClick={() => this.addToCart(this.props.products[i].id)} 
+                        onClick={() =>  this.props.addToCart(item)} 
                         className="Add-to-cart">Add To Cart</button>                     
                     </div>
                   ) : null
@@ -180,8 +178,9 @@ class Blades extends Component {
 
 const mapStateToProps = state => {
     return {
-        ...state.productReducer
+        ...state.productReducer,
+        ...state.cartReducer
     };
 };
 
-export default connect(mapStateToProps, {getProducts})(Blades);
+export default connect(mapStateToProps, {getProducts, addToCart})(Blades);

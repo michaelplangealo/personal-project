@@ -10,6 +10,7 @@ import "react-image-gallery/styles/css/image-gallery.css";
 import videostill from  '../../assets/video-still.jpg';
 import {connect} from 'react-redux';
 import {getProducts} from '../../redux/products';
+import {addToCart} from '../../redux/cart';
 
 class ShaveCream extends Component {
     constructor(props) {
@@ -30,8 +31,7 @@ class ShaveCream extends Component {
     }
 
     addToCart(id) {
-        axios.post(`/api/cart/${id}`)
-            .then(response => console.log(response))
+        addToCart(id);
     }
 
     toggleAccordion1 = () => {
@@ -99,11 +99,10 @@ class ShaveCream extends Component {
                   item.item_name === "Shave Cream" ? (
                     <div className="Container" key={i}>
                         <h1 className="Open-sans-header">{item.item_name}</h1>
-                        <p className="Playfair-body">{item.price}</p>
+                        <p className="Playfair-body">{`$${item.price}`}</p>
                         <p className="Playfair-body">{item.item_description}</p>
-            
                         <button 
-                        onClick={() => this.addToCart(this.props.products[i].id)} 
+                        onClick={() =>  this.props.addToCart(item)} 
                         className="Add-to-cart">Add To Cart</button>                     
                     </div>
                   ) : null
@@ -182,8 +181,9 @@ class ShaveCream extends Component {
 
 const mapStateToProps = state => {
     return {
-        ...state.productReducer
+        ...state.productReducer,
+        ...state.cartReducer
     }
 }
 
-export default connect(mapStateToProps, {getProducts})(ShaveCream);
+export default connect(mapStateToProps, {getProducts, addToCart})(ShaveCream);

@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import axios from 'axios';
 import { connect } from "react-redux";
 import Footer from '../Footer/Footer';
+import {Link} from 'react-router-dom';
 
 import './Login.css';
 
@@ -16,11 +17,11 @@ class Login extends Component {
   }
 
   usernameHandler(val) {
-    this.setState({ usernameText: val })
+    this.setState({ username: val })
   }
 
   passwordHandler(val) {
-    this.setState({ passwordText: val })
+    this.setState({ password: val })
   }
 
   sendIt(username, password) {
@@ -60,12 +61,12 @@ class Login extends Component {
           <input 
             placeholder="Password" 
             className="Set-block" 
-            type="text" 
+            type="password" 
             onChange={e => this.passwordHandler(e.target.value)} />  
         </div> 
-          <button 
+          <Link to="/cart"><button 
             className="Signin-btn" 
-            onClick={()=> this.sendIt(this.state.username, this.state.password)}>Continue</button>
+            onClick={()=> this.sendIt(this.state.username, this.state.password)}>Continue</button></Link>
           <button 
             className="Register-btn" 
             onClick={()=> this.createIt(this.state.username, this.state.password)}>Register </button>

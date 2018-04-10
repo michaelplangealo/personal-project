@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 
 import Accordion from '../Accordion/Accordion';
 import Footer from '../Footer/Footer';
@@ -7,6 +8,7 @@ import './Home.css';
 
 import headerPic from '../../assets/shave-mobile.jpg';
 import headerPicTwo from '../../assets/shave-mobile-2.jpg';
+import headerPicThree from '../../assets/shave-mobile-3.jpg';
 
 import gq from '../../assets/gq-sm.png';
 import complex from '../../assets/complex-sm.png';
@@ -17,7 +19,6 @@ import amazon from '../../assets/amazon.png';
 import target from '../../assets/target.png';
 
 import bc93 from '../../assets/bc93.svg';
-
 
 class Home extends Component {
   constructor(props) {
@@ -56,15 +57,16 @@ class Home extends Component {
         <div className="Main-intro">
           <img src={headerPic} className="Header-pic" alt="main header" />
           <img src={headerPicTwo} className="Header-pic-2" alt="Main header 2" />
+          <img src={headerPicThree} className="Header-pic-3" alt="Main header 3" />
         </div>
 
         <div className="Intro">
-          <h1 className="Tagline">97% see clearer, smoother skin</h1>
-          <p className="Tag-paragraph">Bevel is the first and only end to end <br /> shaving system designed to help reduce shaving irritation and razor bumps.</p>
-          <div className="Button-primary">Learn More</div>
+          <h1 className="Tagline Container">97% see clearer, smoother skin</h1>
+          <p className="Tag-paragraph Container">Bevel is the first and only end to end shaving system designed to help reduce shaving irritation and razor bumps.</p>
+          <Link to="/shave"><div className="Button-primary">Learn More</div></Link>
         </div>
 
-        <div>
+        <div className="Center-logo">
           <ul className="Logo-scroll">
             <li>
               <img onClick={() => this.changer(0)} src={gq} className="Gq-icon" alt="Gq icon" />
@@ -106,7 +108,9 @@ class Home extends Component {
 
         <div className="Container">
           <h4 className="Center Sans-font Advice">Get Advice</h4>
-          <img alt="" src={bc93} className="Bc93" />
+          <div className="Center-pic">
+            <img alt="" src={bc93} className="Bc93" />
+          </div>
           <h1 className="Sans-font Font-size">Becoming a Bevel Man: The Shave</h1>
           <a className="Read-more" href=""><p>Read the article</p></a>
         </div>

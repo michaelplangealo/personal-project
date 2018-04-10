@@ -1,10 +1,11 @@
 import axios from 'axios';
 
 const ADD_TO_CART = 'ADD_TO_CART';
+const GET_CART = 'GET_CART';
 
 const initialState = {
     cart: [],
-    loading: false
+    // loading: false
 }
 
 export default function cartReducer(state = initialState, action) {
@@ -22,20 +23,46 @@ export default function cartReducer(state = initialState, action) {
                 cart: action.payload
             }
 
+        case `${GET_CART}_PENDING`:
+            return {
+                ...state,
+                loading: true
+            }
+
+        case `${GET_CART}_FULFILLED`:
+            return {
+                ...state,
+                loading: false,
+                cart: action.payload
+            }
+
         default:
             return state;
     }
 }
 
-export function addToCart(id) {
+export function addToCart(item) {
+    console.log(item)
     return {
         type: ADD_TO_CART,
         payload: axios.post(`/api/cart`, {
-            id: id.id,
-            item_name: id.item_name,
-            price: id.price
+            id: item.id,
+            item_name: item.item_name,
+            price: item.price,
+            image_url: item.image_url
             })
-        .then(response => console.log(response))
+        .then(response => response.data)
+        .catch(err => err)
+    };
+}
+
+export function getCart(item) {
+    return {
+        type: GET_CART,
+        payload: axios.get(`/api/cart`)
+        .then(response => {console.log(response) 
+            return response.data
+        })
         .catch(err => err)
     };
 }

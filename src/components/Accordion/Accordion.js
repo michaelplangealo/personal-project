@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Accordion.css';
+import {Link} from 'react-router-dom';
 
 class Accordion extends Component {
     constructor(props) {
@@ -15,13 +16,15 @@ class Accordion extends Component {
     toggleAccordion1 = () => {
         let slide1 = this.state.switch1;
         let div1 = (
-            <div className="Accordion-content">
+            <div className="Accordion-content Description-container">
+                <img className="Resize-pic" src="https://i.imgur.com/RVFDHxl.jpg" alt="" />            
                 <h2>The Most Advanced Trimmer On The Planet</h2>
                 <p>
                     The future of grooming is right now. By combining art and science, 
                     we created the Bevel Trimmer and invented a new way to adjust sharpness 
                     and guarantee powerful cordless performance, in a perfectly weighted body.
                 </p>
+                <button className="Yellow-btn">Buy Trimmer</button>
             </div>
         );
         this.setState({switch1: (!slide1 ? div1 : null), switch2: null, switch3: null})
@@ -30,7 +33,8 @@ class Accordion extends Component {
     toggleAccordion2 = () => {
         let slide2 = this.state.switch2;
         let div2 = (
-            <div className="Accordion-content">
+            <div className="Accordion-content Description-container">
+                <img className="Resize-pic" src="https://i.imgur.com/72ns7Wf.jpg" alt="" />            
                 <h2>Why Choose Bevel?</h2>
                 <p>
                     You've got coarse, curly hair, which means you're no stranger to irritation, razor 
@@ -38,6 +42,7 @@ class Accordion extends Component {
                     moisturizing shave, helps keep your skin and hair happy. We knew you needed the best 
                     tools to be your best self. So we made them.
                 </p>
+                <Link to="/shave"><button className="Yellow-btn">Shop Bevel</button></Link>                
             </div>
         )
         this.setState({switch2: (!slide2 ? div2 : null), switch1: null, switch3: null})
@@ -46,7 +51,8 @@ class Accordion extends Component {
     toggleAccordion3 = () => {
         let slide3 = this.state.switch3;
         let div3 = (
-            <div className="Accordion-content">
+            <div className="Accordion-content Description-container">
+                <img className="Resize-pic" src="https://i.imgur.com/xLbiTTY.jpg" alt="" />            
                 <h2>A Classic Refresh With You In Mind</h2>
                 <p>
                     Single blade safety razors are your best tools in the fight against skin irritation and 
@@ -55,6 +61,7 @@ class Accordion extends Component {
                     technique, a safety razor can give you the clean shave you want, every time you step in 
                     front of the mirror.
                 </p>
+                <Link to="/shave/safety-razor"><button className="Yellow-btn">Buy Razor</button></Link>                
             </div>
         )
         this.setState({switch3: (!slide3 ? div3 : null), switch1: null, switch2: null})
