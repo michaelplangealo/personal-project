@@ -9,6 +9,8 @@ const users = require('./controller/users');
 const cart = require('./controller/cart');
 const products = require('./controller/products');
 const payment = require('./controller/payment');
+const path = require("path")
+
 
 const {
     CONNECTION_STRING,
@@ -18,6 +20,7 @@ const {
 const bcrypt = require ('bcrypt');
 
 const app = express();
+app.use(express.static(`${__dirname}/../build`))
 
 app.use(json());
 app.use(cors());
@@ -46,6 +49,10 @@ app.post('/api/payment', payment.stripeCharge);
 app.get('/api/me', users.getUser);
 
 const port = process.env.PORT || 3001;
+
+app.get("*", (req, res, next) => {
+ res.sendFile(path.join(__dirname, "/../build/index.html"))
+})
 
 app.listen(port, () => {
     console.log(`Listening on port ${port}`)
