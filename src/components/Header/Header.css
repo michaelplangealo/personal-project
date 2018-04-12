@@ -28,8 +28,10 @@
 }
 
 @media (min-width: 768px ) {
+
     .Main-nav {
         display: none;
+        
     }
 
     .Main-nav-2 {
@@ -38,6 +40,8 @@
         font-weight: 300;
         text-transform: uppercase;
         padding: 15px;
+        width: 90%;
+        margin: 0 auto;
     }
 
     .Main-logo {
@@ -48,9 +52,24 @@
         float: right;
     }
 
-    .Shave,
-    .Link {
+    .Shave {
         margin-right: 25px;
+        padding: 0 50px;
+        padding-right: 30px;
+    }
+
+    .Bevel-code {
+        padding-right: 10px;
+    }
+
+    .Shave,
+    .Trimmer {
+        font-size: 12.5px;
+        letter-spacing: 2px;
+    }
+
+    .Bevel-code {
+        width: 10px;
     }
    
 }

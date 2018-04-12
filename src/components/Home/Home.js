@@ -8,7 +8,7 @@ import './Home.css';
 
 import headerPic from '../../assets/shave-mobile.jpg';
 import headerPicTwo from '../../assets/shave-mobile-2.jpg';
-import headerPicThree from '../../assets/shave-mobile-3.jpg';
+// import headerPicThree from '../../assets/shave-mobile-3.jpg';
 
 import gq from '../../assets/gq-sm.png';
 import complex from '../../assets/complex-sm.png';
@@ -51,19 +51,20 @@ class Home extends Component {
   }
 
   render() {
-    
+
     return (
       <div className="Main-home">
         <div className="Main-intro">
           <img src={headerPic} className="Header-pic" alt="main header" />
           <img src={headerPicTwo} className="Header-pic-2" alt="Main header 2" />
-          <img src={headerPicThree} className="Header-pic-3" alt="Main header 3" />
+          <div className="Intro">
+            <h1 className="Tagline Container">97% see clearer, smoother skin</h1>
+            <p className="Tag-paragraph Container">Bevel is the first and only end to end shaving system designed to help reduce shaving irritation and razor bumps.</p>
+            <Link to="/shave"><div className="Button-primary">Learn More</div></Link>
+          <div className="Button-parent">
+            <Link style={{textDecoration: 'none', color: 'black'}} to="/shave"><div className="Button-primary-2">Learn More</div></Link>
+          </div>
         </div>
-
-        <div className="Intro">
-          <h1 className="Tagline Container">97% see clearer, smoother skin</h1>
-          <p className="Tag-paragraph Container">Bevel is the first and only end to end shaving system designed to help reduce shaving irritation and razor bumps.</p>
-          <Link to="/shave"><div className="Button-primary">Learn More</div></Link>
         </div>
 
         <div className="Center-logo">
@@ -90,10 +91,15 @@ class Home extends Component {
           {this.state.selectedDisplay}
         </div>
 
-        <div className="Bk-img Bk-img-2">
+        <div className="Bk-img Bk-img-2 Bk-img-3">
           <h1 className="Bk-font Container">Dermatologist Approved</h1>
           <p className="Bk-text Container">The Bevel Shave System is clinically tested to help reduce and prevent razor bumps and irritation.</p>
           <a className="Bk-btn" href="">Learn More</a>
+          <div className="Bk-text-large">
+            <h1 className="Bk-text-h1">Dermatologist Approved</h1>
+            <p className="Bk-text-p">The Bevel Shave System is clinically tested to help reduce and prevent razor bumps and irritation.</p>
+            <a className="Bk-text-a" href="">Learn More</a>
+          </div>
         </div>
 
         <Accordion />

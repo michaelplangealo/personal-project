@@ -20,7 +20,7 @@ export default function cartReducer(state = initialState, action) {
             return {
                 ...state,
                 loading: false,
-                cart: action.payload
+                cart: action.payload,
             }
 
         case `${GET_CART}_PENDING`:
@@ -33,7 +33,8 @@ export default function cartReducer(state = initialState, action) {
             return {
                 ...state,
                 loading: false,
-                cart: action.payload
+                cart: action.payload,
+                total: action.payoad
             }
 
         default:

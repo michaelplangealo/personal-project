@@ -52,3 +52,28 @@
     text-align: center;
     padding: 15px;  
 }
+
+@media (min-width: 768px) {
+    .Footer-pic-width {
+        width: 275px;
+    }
+
+    .Main-footer-large {
+     
+
+        background-color: #f1f1f1;
+    }
+
+    .Main-footer-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: stretch;
+        align-content: stretch;
+    }
+
+    .Nav-info-1 {
+        /* margin-right: 0px; */
+    }
+}

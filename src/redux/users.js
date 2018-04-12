@@ -24,8 +24,6 @@ const initialState = {
 
 export default function userReducer(state = initialState, action) {
   switch (action.type) {
-    // USING OBJECT REST SPREAD TO CREATE NEW STATE
-    // IF USING OBJ.ASSIGN Object.assign({}, state, { isLoading: true });
 
     // WAITING FOR RESPONSE
     case `${GET_USER}_PENDING`:

@@ -14,6 +14,13 @@ ul {
     margin-bottom: 15px;
 }
 
+@media (min-width: 768px) {
+    .Accordion-container {
+        max-width: 1356px;
+        margin: 0 auto;
+    }
+}
+
 .Accordion-title,
 .Accordion-content h2 {
     text-transform: uppercase;    
@@ -39,7 +46,6 @@ ul {
 }
 
 .Accordion-title {
-
     color: #444;
 }
 

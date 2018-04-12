@@ -1,3 +1,7 @@
+.Main-nav {
+    width: 1330px;
+}
+
 .Main-home {
     width: 100vw;
     position: absolute;
@@ -8,6 +12,12 @@
     margin-top: 50px;
     width: 100vw;
     overflow: hidden;
+}
+
+@media (min-width: 1356px) {
+    .Main-home {
+        max-width: 1356px;
+    }
 }
 
 .Tagline,
@@ -45,27 +55,57 @@
 
 @media (min-width: 768px) {
     .Intro {
-        /* width: 40%; */
+        width: 30%;
+        position: absolute;
+        bottom: 170px;
+        left: 125px;
     }
 
     .Tagline {
-        font-size: 46px;
+        font-size: 40px;
         text-align: left;
-
     }
 
     .Tag-paragraph {
-        font-size: 16px;
+        font-size: 12px;
         text-align: left;
-
     }
 
     .Button-primary {
+        display: none;
+    }
 
+    .Button-primary-2 {
+        color: #000;
+        font-size: 14px;
+        text-align: center;
+        text-transform: uppercase;
+        width: 30%;
+        text-decoration: none;
+        background-color: #e69b26;
+        padding: 15px 30px;
+        position: absolute;
+        bottom: -70px;
+        left: 50px;
     }
 
     .Center-logo {
         margin-left: 100px;
+    }
+
+    @media (min-width: 768px) {
+        .Center-logo {
+            width: 1100px;
+            margin: 0 auto;
+        }
+
+        .Tabs-panel {
+            width: 1356px;
+        }
+    }
+
+    .Main-intro {
+        position: relative;
     }
 }
 
@@ -81,7 +121,6 @@
     .Intro {
         margin-top: -30vh;
         padding: 0 30px;
-
     }
 
     .Header-pic {
@@ -100,11 +139,16 @@
     }
 
     .Header-pic-3 {
-        width: 165%;
-        margin-left: -33%;
-        height: ;
-        overflow: hidden;
+        width: 90%;
         display: block;
+    }
+
+    .Main-intro {
+        max-width: 1356px;
+        margin: 0 auto;
+        height: 550px;
+        background: url('../../assets/shave-mobile-3.jpg') no-repeat center;
+        background-size: cover;
     }
 }
 
@@ -136,10 +180,41 @@
     padding: 0;
 }
 
+@media (min-width: 768px) {
+    .Logo-scroll {
+        max-width: 1356px;
+        margin-top: 0;
+        overflow: none;
+        margin-left: -100px;
+        padding-left: 100px;
+    }
+
+    .Gq-icon,
+    .Complex-icon,
+    .Fast-icon,
+    .Time-icon,
+    .WWD-icon {
+        width: 50%;
+        margin: 0 auto;
+        padding-top: 30px;
+    }
+}
+
 .Tabs-content {
     background-color: #f1f1f1;
-    padding: 1px 5px;
+    padding: 1px 25px;
     margin-top: -15px;
+}
+
+@media (min-width: 768px) {
+    .Tabs-content {
+        max-width: 1356px;
+        margin: 0 auto;
+    }
+
+    .Tabs-panel {
+        font-size: 55px !important;
+    }
 }
 
 .Tabs-panel {
@@ -162,6 +237,7 @@
     position: relative;
 }
 
+
 @media (min-width: 360px) {
     
 
@@ -170,6 +246,62 @@
         background: url('../../assets/bg-mobile-acae-2.jpg') no-repeat center;
         background-size: cover;
         position: relative;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .Bk-img-3 {
+        max=width: 1356px;
+        margin: 0 auto;
+        height: 550px;
+        background: url('../../assets/derm-tested.jpg') no-repeat center;
+        background-size: cover;
+        position: relative;
+    }
+
+    .Bk-font,
+    .Bk-text,
+    .Bk-btn {
+        display: none;
+    }
+
+    .Bk-text-large {
+        width: 27%;
+        text-align: left;
+        position: relative;
+        float: right;
+        margin-top: 125px;
+        margin-right: 200px;
+    }
+
+    .Bk-text-h1 {
+        font-size: 34px;
+        text-align: left;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+
+    .Bk-text-p {
+        font-size: 13px;
+        font-family: 'Playfair Display', serif;
+        color: #737277;
+        letter-spacing: 1px;
+        line-height: 2;
+        margin-bottom: 50px;
+    }
+
+    .Bk-text-a {
+        color: #000;
+        font-size: 13px;
+        font-weight: 700;
+        font-family: 'Open Sans', sans-serif;
+        text-transform: uppercase;        
+        text-decoration: none;
+        border: 2px solid #000;
+        padding: 15px 40px;
+        letter-spacing: 1px;
     }
 }
 
@@ -213,12 +345,6 @@
     text-decoration: none;
 }
 
-.Logo-flex {
-    display: flex;
-    width: 65%;
-    margin: 0 auto;    
-}
-
 .Avail {
     font-size: 26px;
     font-family: 'Open Sans', sans-serif;
@@ -228,14 +354,35 @@
     margin-bottom: 30px;
 }
 
+@media (min-width: 768px) {
+    .Avail {
+        font-size: 32px !important;
+    }
+
+    .Store-width {
+        
+    }
+}
+
 .Pad {
     padding: 25px 0;
 }
 
+@media (min-width: 768px) {
+    .Pad {
+        padding: 50px 0;
+        margin-top: -15px;
+    }
+}
+
+.Logo-flex {
+    text-align: center;
+    
+}
+
 .Store-width {
-    width: 71px;
-    height: 24px;
-    padding: 0 15px;
+    width: 9%;
+    padding: 0 35px;
 }
 
 .Center {
@@ -256,6 +403,16 @@
     margin-top: 60px;
 }
 
+@media (min-width: 768px) {
+    .Advice {
+        font-size: 16px;
+        width: 750px;
+        margin: 0 auto;
+        margin-top: 75px;
+        margin-bottom: 25px;
+    }
+}
+
 .Bc93 {
     width: 138px;
     height: 19.44px;
@@ -269,6 +426,12 @@
     margin-bottom: 50px;
 }
 
+@media (min-width: 768px) {
+    .Font-size {
+        font-size: 32px;
+    }
+}
+
 .Read-more {
     font-size: 11px;
     margin: 40px 0 60px;
@@ -279,6 +442,12 @@
 
 .Read-more a {
     padding-bottom: 400px;     
+}
+
+@media (min-width: 768px) {
+    .Read-more {
+        padding-bottom: 500px;
+    }
 }
 
 .Center-pic {

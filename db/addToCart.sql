@@ -1,4 +1,4 @@
-INSERT INTO cart (user_id, product_id, product_quantity) VALUES ($1, $2, $3);
-SELECT pr.* FROM products pr
-JOIN cart ca ON pr.id = ca.product_id
+INSERT INTO cart (user_id, item_name) VALUES ($1, $2);
+SELECT * FROM products
+JOIN cart ON products.item_name = cart.product_id
 WHERE user_id = $1;

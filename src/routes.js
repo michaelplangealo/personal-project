@@ -17,11 +17,13 @@ import ShaveCream from './components/ShaveCream/ShaveCream';
 import RestoringBalm from './components/RestoringBalm/RestoringBalm';
 import PrimingOil from './components/PrimingOil/PrimingOil';
 import ShaveBrush from './components/ShaveBrush/ShaveBrush';
+import Checkout from './components/Checkout/Checkout';
+import CheckoutForm from './components/CheckoutForm/CheckoutForm';
 
 export default (
     <Switch>
-        <Route exact path="/" component={ Home } />
-        <Route path="/trimmer" component={ Trimmer } />
+        <Route exact path="/" component={Home} />
+        <Route path="/trimmer" component={Trimmer} />
         <Route path="/shave" render={() => (
             <StoreLanding>
                 <Switch>
@@ -36,8 +38,10 @@ export default (
                 </Switch>
             </StoreLanding>
         )} />
-        <Route path="/cart" component={ Cart } /> 
-        <Route path="/product" component={ Product } /> 
+        <Route path="/cart" component={Cart} /> 
+        <Route path="/product" component={Product} /> 
         <Route path="/login" component={Login} />      
+        <Route path="/checkout" component={Checkout} />
+        <Route path="/checkoutform" component={CheckoutForm} />
     </Switch>
 )

@@ -34,9 +34,19 @@ input {
     text-transform: uppercase;    
 }
 
-.Form-style{
+.Form-style {
     width: 90%;
     margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    input {
+        width: 27%;
+    }
+
+    .Signin-btn {
+        width: 28% !important;
+    }
 }
 
 .Facebook-btn {
@@ -47,7 +57,7 @@ input {
     background-color: #5f7bb9;
     border: none;
     outline: none;
-    padding: 12px 45px;
+    padding: 13px 80px;
 }
 
 .Signin-btn {

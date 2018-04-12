@@ -8,7 +8,7 @@ const session = require('express-session');
 const users = require('./controller/users');
 const cart = require('./controller/cart');
 const products = require('./controller/products');
-const stripeCharge = require('./routes/payment');
+const payment = require('./controller/payment');
 
 const {
     CONNECTION_STRING,
@@ -40,9 +40,10 @@ app.get('/api/cart', cart.getCart);
 app.post('/api/cart', cart.addToCart);
 app.put('/api/login', users.login);
 app.put('/api/register', users.register);
-app.post('/api/payment', stripeCharge);
+app.put('/api/checkoutform', users.getShippingInfo);
+app.post('/api/payment', payment.stripeCharge);
 // app.get('/logout', logout);
-// app.get('/api/me', getUser);
+app.get('/api/me', users.getUser);
 
 const port = process.env.PORT || 3001;
 
