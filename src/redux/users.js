@@ -2,23 +2,11 @@ import axios from "axios";
 
 // CONSTANTS (ACTION TYPES)
 const GET_USER = "GET_USER";
-
-// ACTION CREATORS
-export function getUser() {
-  return {
-    type: GET_USER,
-    payload: axios
-      .get("/api/me")
-      .then(response => {
-        return response.data;
-      })
-      .catch(err => err)
-  };
-}
+const ADD_USER_TO_PROPS = "ADD_USER_TO_PROPS";
 
 // INITIAL STATE
 const initialState = {
-  user: {},
+  users: [],
   isLoading: false
 };
 
@@ -37,10 +25,36 @@ export default function userReducer(state = initialState, action) {
       return {
         ...state,
         isLoading: false,
-        user: action.payload
+        users: action.payload
       };
+
+    case ADD_USER_TO_PROPS:
+      return {
+        ...state,
+        users: action.payload
+      }
 
     default:
       return state;
   }
+}
+
+// ACTION CREATORS
+export function getUser() {
+  return {
+    type: GET_USER,
+    payload: axios
+      .get("/api/me")
+      .then(response => {
+        return response.data;
+      })
+      .catch(err => err)
+  };
+}
+
+export function addUserToProps(user) {
+  return {
+    type: ADD_USER_TO_PROPS,
+    payload: user
+  };
 }

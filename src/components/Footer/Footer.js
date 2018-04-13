@@ -19,7 +19,7 @@ const Footer = () => {
           <li><a className="Pinterest" target="_blank"><img src={pinterest} alt="" /></a></li> */}
         </ul>
       </div>
-      <div className="">
+      <div className="Footer-accordion">
         <Accordion2 />
       </div>
       <div className="Copyright">
@@ -29,12 +29,13 @@ const Footer = () => {
           <div className="Main-footer-container">
             <div>
               <img className="Footer-pic-width" src={footer} alt="" />
+              <p className="Copyright-2"> &copy; 2013 - 2017 Walker & Company Brands</p>
             </div>
             <nav className="Nav-info-1">
               <h3>Company</h3>
               <ul>
                 <li>Careers</li>
-                <li>Beve Code</li>
+                <li>Bevel Code</li>
                 <li>Walker & Company</li>
                 <li>Terms & Conditions</li>
               </ul>

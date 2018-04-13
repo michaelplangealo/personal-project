@@ -2,6 +2,8 @@
     padding-top: 51px;
     background: white;
     z-index: -9999;
+    margin: 0 auto;
+    overflow-y: hidden; 
 }
 
 .Comment-quote {
@@ -30,8 +32,6 @@
 .Database-info {
     text-align: center;
 }
-
-
 
 ul {
     padding: 0;
@@ -86,3 +86,14 @@ ul {
 .Border {
     border-bottom: 1px solid #ccc;
 }
+
+@media (min-width: 768px) {
+    .Database-info {
+        width: 100px;
+    }
+
+    .Comment-quote {
+        margin: 0 auto;
+    }
+}
+

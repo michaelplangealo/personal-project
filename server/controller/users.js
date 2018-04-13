@@ -46,12 +46,12 @@ module.exports = {
 
   getShippingInfo: (req, res) => {
     const dbInstance = req.app.get("db");
-    console.log(req.body);
+    console.log("req.body is:", req.body);
     const {id, firstName, lastName, address, city, state, postal, email, phone } = req.body;
 
     dbInstance
-      .updateProfile(firstName, lastName, address, city, state, postal, email, phone, id)
-      .then(response => res.status(200).json(response))
+      .updateProfile(id, firstName, lastName, address, city, state, postal, email, phone)
+      .then(response => console.log(response))
       .catch(err => console.log(err))
   },
 

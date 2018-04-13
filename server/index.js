@@ -41,6 +41,7 @@ massive(CONNECTION_STRING).then( db => {
 app.get('/api/products', products.getProducts);
 app.get('/api/cart', cart.getCart);
 app.post('/api/cart', cart.addToCart);
+app.delete('/api/cart/:id', cart.deleteFromCart);
 app.put('/api/login', users.login);
 app.put('/api/register', users.register);
 app.put('/api/checkoutform', users.getShippingInfo);

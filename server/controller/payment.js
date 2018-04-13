@@ -4,10 +4,7 @@ const secretKey = process.env.STRIPE_SECRET;
 const stripe = require("stripe")(secretKey);
 
 module.exports = {
-    stripeCharge: (req, res, next) => {
-        const db = req.app.get('db');
-        db.
-            
+    stripeCharge: (req, res, next) => {            
         stripe.charges.create({
             amount: req.body.amount,
             currency: 'usd',

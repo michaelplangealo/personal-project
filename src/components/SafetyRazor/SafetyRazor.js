@@ -145,7 +145,7 @@ class ShaveBrush extends Component {
                   ) : null
             )
           }
-          
+
         return (
             <div>
                <div className="Carousel">
@@ -172,7 +172,6 @@ class ShaveBrush extends Component {
                             <h5>Seal, Soothe</h5>
                             {this.state.switch1}
                         </a>
-
                     </li>
                     <li className="Accordion-item">
                     <a onClick={this.toggleAccordion2} className="Accordion-title">
@@ -194,13 +193,10 @@ class ShaveBrush extends Component {
                     </li>
                 </ul>
                </div>
-
                <div className="Still-video">
                     <img src={videostill} alt="Still video" className="Video-still" />
                </div>
-
                <div className="Advice">
-                    
                </div>
 
                 <Footer />

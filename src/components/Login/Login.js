@@ -2,9 +2,8 @@ import React, {Component} from "react";
 import axios from 'axios';
 import { connect } from "react-redux";
 import Footer from '../Footer/Footer';
-import {Link} from 'react-router-dom';
-import {getUser} from '../../redux/users';
-
+import {Link, Redirect} from 'react-router-dom';
+import {getUser, addUserToProps} from '../../redux/users';
 import './Login.css';
 
 class Login extends Component {
@@ -12,15 +11,10 @@ class Login extends Component {
     super(props);
 
     this.state = {
-      password: "",
       username: "",
-      response1: "",
-      repsonse2: ""
+      password: "",
+      redirector: null
     }
-  }
-
-  componentDidMount() {
-    this.props.getUser();
   }
 
   usernameHandler(val) {
@@ -31,34 +25,42 @@ class Login extends Component {
     this.setState({ password: val })
   }
 
-  // sendIt(username, password) {
-  //   axios.put("/api/login", {
-  //     username,
-  //     password
-  //   }).then(response => this.setState({response1: }))
-  // }
+  sendIt(username, password) {
+    axios.put("/api/login", {
+      username,
+      password
+    }).then(response => this.setState({response1: response.data}))
+  }
 
-  // createIt(username, password){
-  //   axios.put("/api/register", {
-  //     username,
-  //     password
-  //   })
-  //   .then(response => this.setState({repsonse2: }))
-  // }
+    createIt(username, password){
+    axios.put("/api/register", {
+      username,
+      password
+    })
+    .then(response => console.log(response))
+  }
 
-  // login() {
-  //   axios.post('/api/login', {redirector})
-  //   .then(repsonse => response.data.user ?
-  //   this.setState({redirector: <Redirect to="/checkoutform" />})
-  //   : res.data === 'WRONGPASSWORD'
-  // )
-  // }
+  login(username, password) {
+    axios.put('/api/login', {
+      username,
+      password
+    })
+    .then(response => {
+      console.log(response)
+      if(response.data.user_id){
+        this.props.addUserToProps(response.data)
+      this.setState({redirector: <Redirect to="/checkoutform" />}) 
+
+    } else if (response.data === 'BADPW'){
+      this.setState({redirector: alert("that is a bad password!")})
+    }
+    })}
 
   render(){
-    const {onRouteChange} = this.props;
+    console.log(this.state)
     return (
       <div>
-      <form className="Container Padding-top Centered Form-style">
+      <div className="Container Padding-top Centered Form-style">
         <div>
           <h2 className="Open-sans-font">Welcome Back! Please Sign In</h2>
           <div>
@@ -68,7 +70,7 @@ class Login extends Component {
         <p className="Open-sans-font">OR</p>
         <div className="Input-center">
           <input 
-            placeholder="Email" 
+            placeholder="Username" 
             className="Set-block" 
             type="text" 
             onChange={e => this.usernameHandler(e.target.value)} />
@@ -80,18 +82,16 @@ class Login extends Component {
             type="password" 
             onChange={e => this.passwordHandler(e.target.value)} />  
         </div>
-          <Link style={{textDecoration: 'none'}} to="/checkoutform"><button 
+          <button 
             className="Signin-btn"
-            onClick={()=> this.sendIt(this.state.username, this.state.password)}>Continue</button></Link>
-            <button onClick={() => onRouteChange('home')}>
-              Continue
-            </button>
-          <button
+            onClick={()=> this.login(this.state.username, this.state.password)}>Continue</button>
+
+            <button
             className="Register-btn"
             onClick={()=> this.createIt(this.state.username, this.state.password)}>Register</button>
-      </form>
+      </div>
       <Footer />
-      {/* {this.state.redirector} */}
+      {this.state.redirector}
       </div>
     );
   }
@@ -101,4 +101,4 @@ const mapStateToProps = state => ({
   ...state.userReducer
 });
 
-export default connect(mapStateToProps, {getUser})(Login);
+export default connect(mapStateToProps, {getUser, addUserToProps})(Login);

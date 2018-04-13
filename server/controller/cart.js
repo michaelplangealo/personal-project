@@ -22,9 +22,9 @@ module.exports = {
     const {id} = req.params;
     const {cart} = req.session;
 
-    const i = cart.findIndex((item) => item.id);
-    cart.splice(i, 1);
-    res.status(200).json(req.session)
+    cart.splice(id, 1);
+    console.log(cart)
+    res.status(200).json(cart)
   }
 }
 

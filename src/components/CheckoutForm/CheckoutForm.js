@@ -2,6 +2,10 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import './CheckoutForm.css';
 import Login from '../Login/Login';
+import Checkout from '../Checkout/Checkout';
+import {connect} from 'react-redux';
+import Footer from '../Footer/Footer';
+import {addUserToProps} from '../../redux/users';
 
 class CheckoutForm extends Component {
     constructor(props) {
@@ -22,7 +26,9 @@ class CheckoutForm extends Component {
     }
 
     handleChangeShipping(firstName, lastName, address, city, state, postal, email, phone){
+        console.log(this.props)
         axios.put('/api/checkoutform', {
+            id: this.props.users.user_id,
             firstName,
             lastName,
             address,
@@ -32,7 +38,7 @@ class CheckoutForm extends Component {
             email,
             phone
         })
-        .then(response => console.log(response))
+        .then(response => this.props.addUserToProps(response.data))
     }
 
     handleFirstName(val) {
@@ -72,12 +78,10 @@ class CheckoutForm extends Component {
     }
 
     render(){
+        console.log(this.props.total)
         const {firstName, lastName, address, city, state, postal, email, phone} = this.state;
         return(
             <div className="Pad-top">
-            { this.state.route === 'signin' ?
-                <Login onRouteChange={this.onRouteChange} /> :
-                <div>
                 <div className="Form-container">
                     <div className="Col-1">
                         <input onChange={e => this.handleFirstName(e.target.value)}
@@ -181,11 +185,21 @@ class CheckoutForm extends Component {
                         <button onClick={() => this.handleChangeShipping(firstName, lastName, address, city, state, postal, email, phone)}>Save & Submit</button>
                     </div>             
                 </div>
-                </div>
-            }
+                <Checkout
+                    name={'Bevel'}
+                    amount={this.props.total} />
+                <Footer />
             </div>
         );
     }
 }
 
-export default CheckoutForm;
+const mapStateToProps = state => {
+    return {
+      ...state.userReducer,
+      ...state.cartReducer
+    }
+  }
+  
+  export default connect(mapStateToProps, {addUserToProps})(CheckoutForm);
+  
