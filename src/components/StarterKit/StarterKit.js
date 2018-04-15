@@ -123,7 +123,7 @@ class ShaveBrush extends Component {
 
         return (
             <div className="Razor-container">
-               <div style={{width: '50vw', marginLeft: '6vw'}} className="Carousel">
+               <div className="Carousel">
                     <ImageGallery 
                         items={images}
                         disableArrowKeys={this.state.disableArrowKeys}
@@ -133,7 +133,7 @@ class ShaveBrush extends Component {
                          />
                </div>
 
-               <div style={{width: '50vw', marginLeft: '6vw'}} className="Database-info">
+               <div className="Database-info">
                     {products}
                </div>
 

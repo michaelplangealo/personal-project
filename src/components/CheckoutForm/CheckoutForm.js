@@ -85,31 +85,39 @@ class CheckoutForm extends Component {
                 <div className="Form-container">
                     <div className="Col-1">
                         <input onChange={e => this.handleFirstName(e.target.value)}
-                            className="Half-width" 
+                            className="Full-width" 
                             type="text" 
                             placeholder="First Name" />
+                    </div>
+
+                    <div className="Col-2">
                         <input 
                             onChange={e => this.handleLastName(e.target.value)} 
-                            className="Half-width" 
+                            className="Full-width" 
                             type="text" 
                             placeholder="Last Name" />
                     </div>
-                    <div className="Col-4">
+
+                    <div className="Col-3">
                     <input 
                         onChange={e => this.handleAddress(e.target.value)} 
                         className="Full-width" 
                         type="text" 
                         placeholder="Address" />
                     </div>
-                    <div className="Col-2">
-                        <input 
+                    <div className="Col-4">
+                        <input
                             onChange={e => this.handleCity(e.target.value)} 
-                            className="Third-width" 
+                            className="Full-width" 
                             type="text" 
                             placeholder="City" />
-                        <select 
+
+                    </div>
+
+                    <div className="Col-5">
+                        <select
                             onChange={e => this.handleState(e.target.value)} 
-                            className="Third-width" type="text" 
+                            className="Full-width" type="text" 
                             placeholder="State">
                             <option value="AL">Alabama</option>
                             <option value ="AK">Alaska</option>
@@ -163,31 +171,39 @@ class CheckoutForm extends Component {
                             <option value="WI">Wisconsin</option>
                             <option value="WY">Wyoming</option>
                         </select>
+                        </div>
+
+                    <div className="Col-6">
                         <input 
                             onChange={e => this.handlePostal(e.target.value)} 
-                            className="Third-width" 
+                            className="Full-width" 
                             type="text" 
                             placeholder="Postal Code" />
                     </div>
-                    <div className="Col-3">
+
+                    <div className="Col-7">
                         <input 
                             onChange={e => this.handleEmail(e.target.value)} 
-                            className="Half-width" 
+                            className="Full-width" 
                             type="email" 
-                            placeholder="Email" />
+                            placeholder="Email" /> 
+                    </div>  
+
+                    <div className="Col-8">
                         <input 
                             onChange={e => this.handlePhone(e.target.value)} 
-                            className="Half-width" 
+                            className="Full-width" 
                             type="tel" 
-                            placeholder="Phone Number" /> 
-                    </div>  
+                            placeholder="Phone Number" />
+                    </div>
+
                     <div className="Submit-btn">
-                        <button onClick={() => this.handleChangeShipping(firstName, lastName, address, city, state, postal, email, phone)}>Save & Submit</button>
-                    </div>             
-                </div>
-                <Checkout
+                        <button className="Checkout-btn-2" onClick={() => this.handleChangeShipping(firstName, lastName, address, city, state, postal, email, phone)}>Save & Submit</button>
+                    </div>      
+                    <Checkout
                     name={'Bevel'}
-                    amount={this.props.total} />
+                    amount={this.props.total} />       
+                </div>
                 <Footer />
             </div>
         );

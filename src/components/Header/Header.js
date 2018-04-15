@@ -29,7 +29,7 @@ class Header extends Component {
       menu = (
         <div className="Menu-parent">
             <ul className="Menu-list">
-              <li className="Menu-child"><Link to='/trimmer'>Trimmer</Link></li>
+              <li className="Menu-child"><Link style={{color: '#fff', textDecoration: 'none'}} to='/shave'>Trimmer</Link></li>
               <li className="Menu-child"><Link className="Link" to='/shave'>Shave</Link></li>
               <li>
                 <img src={bevel} className="Bevel-code" alt="second logo" />
@@ -56,7 +56,7 @@ class Header extends Component {
         <div className="Main-nav-2">
           <a href="/"><img src={logo} className="Main-logo" alt="logo" /></a>
           <div className="Move-right">
-            <Link className="Trimmer" style={{color: 'white', textDecoration: 'none'}} to='/trimmer'>Trimmer</Link>
+            <Link className="Trimmer" style={{color: 'white', textDecoration: 'none'}} to='/shave'>Trimmer</Link>
             <a className="Shave"><Link style={{color: 'white', textDecoration: 'none'}} to='/shave'>Shave</Link></a>
             <a><img src={bevel} className="Bevel-code" alt="second logo" /></a>
             <Link to="/login"><img src={login} className="Main-login" alt="" /></Link>

@@ -22,11 +22,11 @@ img {
     transition: .75s;
 }
 
-/* @media (min-width: 1280px) {
+@media (min-width: 1280px) {
     .Qa-btn {
         text-align: center;
         width: 100%;
-        position: absolute;
+        /* position: absolute; */
         bottom: 9.8em;
     }
     
@@ -43,9 +43,9 @@ img {
     
     .Flex-wrap {
         margin: 0;
-        position: relative;
+        /* position: relative; */
     }
-} */
+}
 
 @media (min-width: 768px) {
     .Adjust-width {

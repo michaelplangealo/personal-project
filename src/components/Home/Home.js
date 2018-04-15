@@ -120,7 +120,6 @@ class Home extends Component {
           <h1 className="Sans-font Font-size">Becoming a Bevel Man: The Shave</h1>
           <a className="Read-more" href=""><p>Read the article</p></a>
         </div>
-
         <Footer />
       </div>
     );

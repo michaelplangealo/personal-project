@@ -7,6 +7,8 @@ select {
     background-color: #fff;
     border: 1px solid #C9CCCC;
     font-size: 12px;
+    width: 31.7vw;
+    margin-bottom: 15px;
  }
 
  .Pad-top {
@@ -14,42 +16,29 @@ select {
  }
 
 .Form-container {
-    width: 100vw;
+    width: 100%;
+    padding-top: 51px;
+    margin-left: 30vw;
 }
 
 input {
     font-family: 'Open Sans', sans-serif;
+    margin-bottom: 15px;
 }
 
 .Col-1,
 .Col-2,
 .Col-3,
-.Col-4 {
-    width: 50%;
-    margin-bottom: 30px;    
+.Col-4,
+.Col-5,
+.Col-6,
+.Col-7,
+.Col-8,
+ {
+    width: 100%;
+    padding-bottom: 30px !important;    
 }
 
-.Col-1,
-.Col-3 {
-    display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-	align-items: stretch;
-	align-content: stretch;
-}
-
-.Col-2 {
-    display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-	align-items: stretch;
-	align-content: stretch;
-}
-
-.Half-width,
-.Third-width,
 .Full-width {
     padding: 15px 0;
     padding-left: 15px;
@@ -70,4 +59,28 @@ input {
     border-radius: 0;
     padding: 15px;
     background-color: #e69b26;
+    margin-left: 19.5vw;
+}
+
+@media (min-width: 1356px) {
+    select {
+        width: 22.5vw;
+    }
+
+    .Submit-btn {
+        width: 10%;
+        font-size: 13px;
+        text-align: center;
+        text-transform: uppercase;
+        border-radius: 0;
+        padding: 15px;
+        background-color: #e69b26;
+        margin-left: 13.8vw;
+    }
+
+    .Form-container {
+        width: 100%;
+        padding-top: 51px;
+        margin-left: 25vw;
+    }
 }

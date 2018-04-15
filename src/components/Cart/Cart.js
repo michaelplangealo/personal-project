@@ -60,6 +60,7 @@ class Cart extends Component {
 
     return (
         <div>
+          <div className="Checkout-mobile">
             <div className="Total Total-container">
               <p>Subtotal: {subtotal}</p>
               <p>Tax: {tax}</p>
@@ -70,6 +71,21 @@ class Cart extends Component {
             </div>
             <Link to="/shave"><p className="Shopping-btn">Continue Shopping</p></Link>
               {items} 
+        </div>
+
+        <div className="Checkout-desktop">
+            {items}
+            <hr />
+            <div className="Total-2 Total-container-2">
+              <p>Subtotal: {subtotal}</p>
+              <p>Tax: {tax}</p>
+              <p>Est. Total: {total}</p>
+            </div>
+            <div className="Checkout-btn-container-2">
+              <Link to="/login"><button onClick={this.handleLogin} className="Checkout-btn-2">Checkout</button></Link>
+            </div>
+            <Link to="/shave"><p className="Shopping-btn-2">Continue Shopping</p></Link>
+            </div>
             <Footer />
         </div>
     );

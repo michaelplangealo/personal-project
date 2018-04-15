@@ -159,3 +159,16 @@
         margin-top: 50px;
     }
 }
+
+@media (min-width: 1356px) {
+    /* .Main-footer-large {
+        background-color: #f1f1f1;
+        padding: 100px 0;
+        display: block;
+    }
+
+    .Footer-row {
+       margin-left: -10vw;
+       margin-right: 10vw;
+    } */
+}
