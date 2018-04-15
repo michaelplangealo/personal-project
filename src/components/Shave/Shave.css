@@ -81,12 +81,11 @@ img {
 
 @media (min-width: 1356px) {
     .Shop-container {
-        margin-right: -20vw;
-        margin-left: 20vw;
+        /* margin-right: -20vw; */
+        /* margin-left: 20vw; */
     }
     
 }
-
 
 .Img-width-body {
     width: 90%;

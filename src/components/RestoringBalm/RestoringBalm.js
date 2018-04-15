@@ -122,7 +122,7 @@ class RestoringBalm extends Component {
           
         return (
             <div>
-               <div style={{width: '50vw', marginLeft: '25vw'}} className="Carousel">
+               <div style={{width: '50vw', marginLeft: '6vw'}} className="Carousel">
                 <ImageGallery 
                             items={images}
                             showThumbnails={this.state.showThumbnails}
@@ -131,7 +131,7 @@ class RestoringBalm extends Component {
                             />
                </div>
 
-               <div style={{width: '50vw', marginLeft: '25vw'}} className="Database-info">
+               <div style={{width: '50vw', marginLeft: '6vw'}} className="Database-info">
                     {products}
                </div>
 

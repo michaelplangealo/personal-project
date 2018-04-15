@@ -13,11 +13,11 @@
 }
 
 @media (min-width: 1356px) {
-    .Main-footer-large,
+    /* .Main-footer-large,
     .Footer-row {
         margin-left: 20vw;
         margin-right: -20vw;
-    }
+    } */
 }
 
 .Main-nav {

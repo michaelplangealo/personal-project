@@ -26,7 +26,7 @@
 @media (min-width: 1356px) {
     .Main-home {
         max-width: 1356px;
-        margin-left: 20vw;
+        /* margin-left: 20vw; */
     }
 
     .Main-intro {

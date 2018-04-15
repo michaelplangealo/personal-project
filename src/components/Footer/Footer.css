@@ -63,10 +63,16 @@
     }
 }
 
-@media (min-width 1356px) {
+@media (min-width: 1356px) {
     .Main-footer-large {
-        margin-left: 20vw;
+        /* margin-left: 20vw; */
     }
+/* 
+     .Main-footer-large,
+    .Footer-row {
+        margin-left: 20vw;
+        margin-right: -20vw;
+    } */
 }
 
 @media (min-width: 768px) {

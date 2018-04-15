@@ -95,6 +95,11 @@ ul {
     .Comment-quote {
         margin: 0 auto;
     }
+
+    .Resize-pic {
+        width: 50% !important;
+        float: right;
+    }
 }
 
 @media (min-width: 1356px) {

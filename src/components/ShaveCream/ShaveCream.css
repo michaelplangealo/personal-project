@@ -31,9 +31,6 @@
     text-align: center;
 }
 
-
-
-
 ul {
     padding: 0;
 
@@ -86,4 +83,11 @@ ul {
 
 .Border {
     border-bottom: 1px solid #ccc;
+}
+
+@media (min-width: 768px) {
+    .Resize-pic {
+        width: 50% !important;
+        float: right;
+    }
 }
