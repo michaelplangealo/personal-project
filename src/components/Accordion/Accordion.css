@@ -19,6 +19,25 @@ ul {
         max-width: 1356px;
         margin: 0 auto;
     }
+
+    .Resize-pic {
+        width: 50% !important;
+        float: right;
+    }
+
+    .Description-container h1 {
+        float: left;
+    }
+
+    .Description-container {
+        padding-top: 50px;
+    }
+
+    cf:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
 }
 
 .Accordion-title,

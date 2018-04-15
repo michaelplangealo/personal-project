@@ -57,6 +57,18 @@
     display: none;
 }
 
+@media(min-width: 1024px) {
+    .Footer-pic-width {
+        width: 275px;
+    }
+}
+
+@media (min-width 1356px) {
+    .Main-footer-large {
+        margin-left: 20vw;
+    }
+}
+
 @media (min-width: 768px) {
     .Footer-pic-width {
         width: 275px;

@@ -27,7 +27,7 @@ class Shave extends Component {
                 <Link to="/shave/subscription">
                 <div className="Img-width Margin-top Adjust-width Flex-wrap">
                     <div>
-                        <div className="Zoom-image">
+                        <div className="Zoom-image" >
                             <img src={pic1} className="Img-width" alt="Subscription" />
                         </div>
                         <h1 className="Open-sans-header">Bevel Shave Subscription</h1>
@@ -49,6 +49,8 @@ class Shave extends Component {
                     </div>
                 </div>
                 </Link>
+
+                <Link to="/shave/starter-kit">                
                 <div className="Img-width Margin-top Adjust-width Flex-wrap">
                     <div>
                         <div className="Zoom-image">
@@ -59,7 +61,9 @@ class Shave extends Component {
                         <p className="Open-sans-italic">$129.95</p>
                     </div>
                 </div>
+                </Link>
 
+                <Link to="/shave/gift-card">         
                 <div className="Img-width Margin-top Adjust-width Flex-wrap-2">
                     <div>
                         <div className="Zoom-image">
@@ -70,6 +74,7 @@ class Shave extends Component {
                         <p className="Open-sans-italic">$25.00</p>
                     </div>
                 </div>
+                </Link>
 
                 <Link to="/shave/blades">
                 <div className="Img-width Margin-top Adjust-width Flex-wrap-2">

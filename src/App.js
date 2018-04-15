@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import routes from './routes';
 import Header from './components/Header/Header';
 
+import './App.css';
+
 class App extends Component {
   render() {
     return (
@@ -9,7 +11,9 @@ class App extends Component {
         <nav className="nav">
           <Header />
         </nav>
-        {routes}
+        <div className="App-container">
+          {routes}
+        </div>
       </div>
     );
   }

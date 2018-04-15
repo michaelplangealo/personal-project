@@ -2,12 +2,21 @@
     width: 100%;
     position: fixed; 
     background-color: rgba(0, 0, 0, .8);     
-    z-index: 10000;  
+    z-index: 10000;
 }
 
 @media (min-width: 768px) {
     .Main-header {
         height: 50px;
+    }
+
+}
+
+@media (min-width: 1356px) {
+    .Main-footer-large,
+    .Footer-row {
+        margin-left: 20vw;
+        margin-right: -20vw;
     }
 }
 

@@ -16,7 +16,7 @@ class Accordion extends Component {
     toggleAccordion1 = () => {
         let slide1 = this.state.switch1;
         let div1 = (
-            <div className="Accordion-content Description-container">
+            <div className="Accordion-content Description-container cf">
                 <img className="Resize-pic" src="https://i.imgur.com/RVFDHxl.jpg" alt="" />            
                 <h2>The Most Advanced Trimmer On The Planet</h2>
                 <p>
@@ -33,7 +33,7 @@ class Accordion extends Component {
     toggleAccordion2 = () => {
         let slide2 = this.state.switch2;
         let div2 = (
-            <div className="Accordion-content Description-container">
+            <div className="Accordion-content Description-container cf">
                 <img className="Resize-pic" src="https://i.imgur.com/72ns7Wf.jpg" alt="" />            
                 <h2>Why Choose Bevel?</h2>
                 <p>
@@ -51,7 +51,7 @@ class Accordion extends Component {
     toggleAccordion3 = () => {
         let slide3 = this.state.switch3;
         let div3 = (
-            <div className="Accordion-content Description-container">
+            <div className="Accordion-content Description-container cf">
                 <img className="Resize-pic" src="https://i.imgur.com/xLbiTTY.jpg" alt="" />            
                 <h2>A Classic Refresh With You In Mind</h2>
                 <p>

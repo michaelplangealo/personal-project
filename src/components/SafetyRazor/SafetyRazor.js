@@ -12,6 +12,9 @@ import {connect} from 'react-redux';
 import {getProducts} from '../../redux/products';
 import {addToCart} from '../../redux/cart';
 
+import bc93 from '../../assets/bc93.svg';
+
+
 class ShaveBrush extends Component {
     constructor(props) {
         super(props);
@@ -23,7 +26,8 @@ class ShaveBrush extends Component {
             switch4: null,
             showThumbnails: false,
             showFullscreenButton: false,
-            showPlayButton: false
+            showPlayButton: false,
+            disableArrowKeys: true
         }
         // this.addToCart = this.addToCart.bind(this)
     }
@@ -39,14 +43,11 @@ class ShaveBrush extends Component {
     toggleAccordion1 = () => {
         let slide1 = this.state.switch1;
         let div1 = (
-            <div className="Accordion-content">
-                <h2>Chill Out</h2>
+            <div className="Accordion-content Description-container cf">
+            <img className="Resize-pic" src="https://i.imgur.com/j6I5uTQ.jpg" alt="" /> 
+                <h2>100 YEARS IN THE MAKING</h2>
                 <p>
-                    Keep your skin happy with the refreshing coolness of our Restoring Balm. 
-                    This lotion helps to reduce shave irritation by using Tea Tree Oil and 
-                    Witch Hazel to calm your skin. Lactic and Salicylic Acids help exfoliate 
-                    and even your complexion, while Shea Butter helps moisturize and reduce 
-                    blemishes. Full list of ingredients.
+                    Good history students are rewarded with its secrets. Good thing we did our homework. Now you can enjoy a razor that’s carefully sized to shave any area and is perfectly weighted for effortless use.
                 </p>
             </div>
         );
@@ -56,12 +57,11 @@ class ShaveBrush extends Component {
     toggleAccordion2 = () => {
         let slide2 = this.state.switch2;
         let div2 = (
-            <div className="Accordion-content">
+            <div className="Accordion-content Description-container cf">
+            <img className="Resize-pic" src="https://i.imgur.com/2XWI4hx.jpg" alt="" /> 
                 <h2>How Do I Use It?</h2>
                 <p>
-                    After shaving, rinse your skin with cold water to close your pores. Don’t rub. 
-                    Instead, gently pat dry with a clean towel. Rub a nickel-sized amount of 
-                    Restoring Balm into your skin.
+                    Always hold the Safety Razor at about a 30° angle. Holding the logo on the head against your skin, tilt the handle until the blade just touches your skin. Be easy and let the weight of the razor do the work, don’t apply pressure. Keep your glides short and don’t forget to always shave in the direction your hair is growing.
                 </p>
             </div>
         )
@@ -71,12 +71,11 @@ class ShaveBrush extends Component {
     toggleAccordion3 = () => {
         let slide3 = this.state.switch3;
         let div3 = (
-            <div className="Accordion-content">
-                <h2>How Does it work?</h2>
+            <div className="Accordion-content Description-container cf">
+            <img className="Resize-pic" src="https://i.imgur.com/yXlkem5.jpg" alt="" /> 
+                <h2>HOW DOES IT HELP STOP SKIN PROBLEMS?</h2>
                 <p>
-                    Unlike traditional alcohol-based after-shaves, the Bevel Restoring Balm is a lotion 
-                    that doesn’t dry out the skin or sting. Instead, it provides much-needed hydration 
-                    to help reduce inflammation and help prevent razor bumps.
+                    Single blade safety razors cut your hair at skin-level. Unlike multi-blade razors, this design helps prevent tugging, pulling and cutting beneath the skin. All of these issues can cause razor bumps and other irritation. With the right routine and proper technique, a safety razor can give you the clean shave you want without damaging your skin.
                 </p>
             </div>
         )
@@ -86,12 +85,11 @@ class ShaveBrush extends Component {
     toggleAccordion4 = () => {
         let slide4 = this.state.switch4;
         let div4 = (
-            <div className="Accordion-content">
-                <h2>How Does it work?</h2>
+            <div className="Accordion-content Description-container cf">
+            <img className="Resize-pic" src="https://i.imgur.com/X7nZr8P.jpg" alt="" /> 
+                <h2>HOW OFTEN SHOULD I CHANGE BLADES?</h2>
                 <p>
-                    Unlike traditional alcohol-based after-shaves, the Bevel Restoring Balm is a lotion 
-                    that doesn’t dry out the skin or sting. Instead, it provides much-needed hydration 
-                    to help reduce inflammation and help prevent razor bumps.
+                    You should always use a new blade for a new shave. Using dull blades can cause tugging, irritation and razor bumps, among other issues. If you have coarse hair or a thick beard, multiple blade changes may be needed during a single shave.
                 </p>
             </div>
         )
@@ -147,17 +145,18 @@ class ShaveBrush extends Component {
           }
 
         return (
-            <div>
-               <div className="Carousel">
+            <div className="Razor-container">
+               <div style={{width: '50vw', marginLeft: '25vw'}} className="Carousel">
                     <ImageGallery 
                         items={images}
+                        disableArrowKeys={this.state.disableArrowKeys}
                         showThumbnails={this.state.showThumbnails}
                         showFullscreenButton={this.state.showFullscreenButton}
                         showPlayButton={this.state.showPlayButton}
                          />
                </div>
 
-               <div className="Database-info">
+               <div style={{width: '50vw', marginLeft: '25vw'}} className="Database-info">
                     {products}
                </div>
 
@@ -169,7 +168,7 @@ class ShaveBrush extends Component {
                <ul className="Accordion-container">
                     <li className="Accordion-item">
                         <a onClick={this.toggleAccordion1} className="Accordion-title">
-                            <h5>Seal, Soothe</h5>
+                            <h5>A Classic</h5>
                             {this.state.switch1}
                         </a>
                     </li>
@@ -181,23 +180,26 @@ class ShaveBrush extends Component {
                     </li>
                     <li className="Accordion-item">
                         <a onClick={this.toggleAccordion3} className="Accordion-title">
-                            <h5>The Details</h5>
+                            <h5>REDUCING IRRITATION</h5>
                             {this.state.switch3}           
                         </a>
                     </li>
                     <li className="Accordion-item">
                         <a onClick={this.toggleAccordion4} className="Accordion-title">
-                            <h5>The Details 2</h5>
+                            <h5>CHANGING BLADES</h5>
                             {this.state.switch4}           
                         </a>
                     </li>
                 </ul>
                </div>
-               <div className="Still-video">
-                    <img src={videostill} alt="Still video" className="Video-still" />
-               </div>
-               <div className="Advice">
-               </div>
+                <div className="Container">
+                    <h4 className="Center Sans-font Advice">Get Advice</h4>
+                    <div className="Center-pic">
+                        <img alt="" src={bc93} className="Bc93" />
+                    </div>
+                    <h1 className="Sans-font Font-size">Becoming a Bevel Man: The Shave</h1>
+                    <a className="Read-more" href=""><p>Read the article</p></a>
+                </div>
 
                 <Footer />
             </div>

@@ -22,6 +22,31 @@ img {
     transition: .75s;
 }
 
+/* @media (min-width: 1280px) {
+    .Qa-btn {
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        bottom: 9.8em;
+    }
+    
+    .Qa-btn a {
+        width: 100%;
+        color: #000;
+        text-transform: uppercase;
+        font-family: 'Open Sans', sans-serif;
+        background-color: #e69b26;
+        padding: 5% 38.6%;
+        transform: translateY(150%);
+        overflow: hidden;
+    }
+    
+    .Flex-wrap {
+        margin: 0;
+        position: relative;
+    }
+} */
+
 @media (min-width: 768px) {
     .Adjust-width {
         width: 30%;
@@ -54,9 +79,14 @@ img {
     }
 }
 
-.Container {
-    /* width: 90%; */
+@media (min-width: 1356px) {
+    .Shop-container {
+        margin-right: -20vw;
+        margin-left: 20vw;
+    }
+    
 }
+
 
 .Img-width-body {
     width: 90%;

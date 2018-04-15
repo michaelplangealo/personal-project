@@ -12,6 +12,8 @@ import {connect} from 'react-redux';
 import {getProducts} from '../../redux/products';
 import {addToCart} from '../../redux/cart';
 
+import bc93 from '../../assets/bc93.svg';
+
 class ShaveBrush extends Component {
     constructor(props) {
         super(props);
@@ -39,14 +41,11 @@ class ShaveBrush extends Component {
     toggleAccordion1 = () => {
         let slide1 = this.state.switch1;
         let div1 = (
-            <div className="Accordion-content">
-                <h2>Chill Out</h2>
+            <div className="Accordion-content Description-container cf">
+             <img className="Resize-pic" src="https://i.imgur.com/1kAzSa2.jpg" alt="" /> 
+                <h2>IT’S ALL ABOUT THE FUNDAMENTALS</h2>
                 <p>
-                    Keep your skin happy with the refreshing coolness of our Restoring Balm. 
-                    This lotion helps to reduce shave irritation by using Tea Tree Oil and 
-                    Witch Hazel to calm your skin. Lactic and Salicylic Acids help exfoliate 
-                    and even your complexion, while Shea Butter helps moisturize and reduce 
-                    blemishes. Full list of ingredients.
+                    Using a special blend of Castor, Olive and Sunflower oils, this primer helps prevent nicks while softening skin and hair. Full list of ingredients.
                 </p>
             </div>
         );
@@ -56,12 +55,11 @@ class ShaveBrush extends Component {
     toggleAccordion2 = () => {
         let slide2 = this.state.switch2;
         let div2 = (
-            <div className="Accordion-content">
+            <div className="Accordion-content Description-container cf">
+            <img className="Resize-pic" src="https://i.imgur.com/FUazLLM.jpg" alt="" /> 
                 <h2>How Do I Use It?</h2>
                 <p>
-                    After shaving, rinse your skin with cold water to close your pores. Don’t rub. 
-                    Instead, gently pat dry with a clean towel. Rub a nickel-sized amount of 
-                    Restoring Balm into your skin.
+                    Start by taking a hot shower, or hold a damp hot towel against your skin for at least one minute. Immediately after, massage a nickel-size amount of Priming Oil onto your skin, without rinsing it off. The Priming Oil can also be used as a beard oil that can help hydrate your skin and soften/tame hair while giving your beard a nice shine.
                 </p>
             </div>
         )
@@ -71,12 +69,11 @@ class ShaveBrush extends Component {
     toggleAccordion3 = () => {
         let slide3 = this.state.switch3;
         let div3 = (
-            <div className="Accordion-content">
-                <h2>How Does it work?</h2>
+            <div className="Accordion-content Description-container cf">
+            <img className="Resize-pic" src="https://i.imgur.com/BjNmupf.jpg" alt="" /> 
+                <h2>DO I NEED THIS?</h2>
                 <p>
-                    Unlike traditional alcohol-based after-shaves, the Bevel Restoring Balm is a lotion 
-                    that doesn’t dry out the skin or sting. Instead, it provides much-needed hydration 
-                    to help reduce inflammation and help prevent razor bumps.
+                    Bevel Priming Oil helps soften your hair and skin by holding moisture in. Softer hair enables an easier cut and softened skin yields more easily to your razor. This lets you apply less pressure to get a good shave.
                 </p>
             </div>
         )
@@ -86,12 +83,11 @@ class ShaveBrush extends Component {
     toggleAccordion4 = () => {
         let slide4 = this.state.switch4;
         let div4 = (
-            <div className="Accordion-content">
-                <h2>How Does it work?</h2>
+            <div className="Accordion-content Description-container cf">
+            <img className="Resize-pic" src="https://i.imgur.com/mE0mF3m.jpg" alt="" /> 
+                <h2>IS THIS OKAY TO USE FOR MY SKIN?</h2>
                 <p>
-                    Unlike traditional alcohol-based after-shaves, the Bevel Restoring Balm is a lotion 
-                    that doesn’t dry out the skin or sting. Instead, it provides much-needed hydration 
-                    to help reduce inflammation and help prevent razor bumps.
+                    Yes. We can’t control outlying factors your skin may be affected by, like hormones and build up, but we can control our products. We specifically chose Sunflower, Castor and Olive oils for their beneficial properties, including their ability to help soften skin.
                 </p>
             </div>
         )
@@ -142,7 +138,7 @@ class ShaveBrush extends Component {
           
         return (
             <div>
-               <div className="Carousel">
+               <div style={{width: '50vw', marginLeft: '25vw'}} className="Carousel">
                     <ImageGallery 
                         items={images}
                         showThumbnails={this.state.showThumbnails}
@@ -151,7 +147,7 @@ class ShaveBrush extends Component {
                          />
                </div>
 
-               <div className="Database-info">
+               <div style={{width: '50vw', marginLeft: '25vw'}} className="Database-info">
                     {products}
                </div>
 
@@ -163,7 +159,7 @@ class ShaveBrush extends Component {
                <ul className="Accordion-container">
                     <li className="Accordion-item">
                         <a onClick={this.toggleAccordion1} className="Accordion-title">
-                            <h5>Seal, Soothe</h5>
+                            <h5>THE FIRST STEP</h5>
                             {this.state.switch1}
                         </a>
 
@@ -176,26 +172,27 @@ class ShaveBrush extends Component {
                     </li>
                     <li className="Accordion-item">
                         <a onClick={this.toggleAccordion3} className="Accordion-title">
-                            <h5>The Details</h5>
+                            <h5>IT’S IMPORTANT</h5>
                             {this.state.switch3}           
                         </a>
                     </li>
                     <li className="Accordion-item">
                         <a onClick={this.toggleAccordion4} className="Accordion-title">
-                            <h5>The Details 2</h5>
+                            <h5>SENSITIVE SKIN</h5>
                             {this.state.switch4}           
                         </a>
                     </li>
                 </ul>
                </div>
 
-               <div className="Still-video">
-                    <img src={videostill} alt="Still video" className="Video-still" />
-               </div>
-
-               <div className="Advice">
-                    
-               </div>
+              <div className="Container">
+                    <h4 className="Center Sans-font Advice">Get Advice</h4>
+                    <div className="Center-pic">
+                        <img alt="" src={bc93} className="Bc93" />
+                    </div>
+                    <h1 className="Sans-font Font-size">Becoming a Bevel Man: The Shave</h1>
+                    <a className="Read-more" href=""><p>Read the article</p></a>
+                </div>
 
                 <Footer />
             </div>

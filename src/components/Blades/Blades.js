@@ -12,6 +12,8 @@ import {connect} from 'react-redux';
 import {getProducts} from '../../redux/products';
 import {addToCart} from '../../redux/cart';
 
+import bc93 from '../../assets/bc93.svg';
+
 class Blades extends Component {
     constructor(props) {
         super(props);
@@ -37,14 +39,11 @@ class Blades extends Component {
     toggleAccordion1 = () => {
         let slide1 = this.state.switch1;
         let div1 = (
-            <div className="Accordion-content">
-                <h2>Chill Out</h2>
+            <div className="Accordion-content Description-container cf">
+            <img className="Resize-pic" src="https://i.imgur.com/zuiwRD2.jpg" alt="" /> 
+                <h2>DO IT RIGHT</h2>
                 <p>
-                    Keep your skin happy with the refreshing coolness of our Restoring Balm. 
-                    This lotion helps to reduce shave irritation by using Tea Tree Oil and 
-                    Witch Hazel to calm your skin. Lactic and Salicylic Acids help exfoliate 
-                    and even your complexion, while Shea Butter helps moisturize and reduce 
-                    blemishes. Full list of ingredients.
+                    A sharp look needs a sharp edge. With high quality razor blades from Bevel, every shave can be on point. Polished to perfection, these blades handle the coarsest of hairs while helping to reduce nicking and tugging.
                 </p>
             </div>
         );
@@ -54,12 +53,13 @@ class Blades extends Component {
     toggleAccordion2 = () => {
         let slide2 = this.state.switch2;
         let div2 = (
-            <div className="Accordion-content">
-                <h2>How Do I Use It?</h2>
+            <div className="Accordion-content Description-container cf">
+            <img className="Resize-pic" src="https://i.imgur.com/BpHGYCA.jpg" alt="" /> 
+                <h2>HOW DO I LOAD THEM INTO THE BEVEL RAZOR?</h2>
                 <p>
-                    After shaving, rinse your skin with cold water to close your pores. Don’t rub. 
-                    Instead, gently pat dry with a clean towel. Rub a nickel-sized amount of 
-                    Restoring Balm into your skin.
+                    To insert a new blade, hold the Bevel Razor head with one hand and twist the handle counter clockwise. Remove the bottom plate from the razor head and then drop a fresh blade onto the pegs of the razor head. Then place the bottom plate back over the blade with the side walls facing upward.
+
+                    Hold the top and bottom of the head with your thumb and index finger, insert handle back into head and twist clockwise.
                 </p>
             </div>
         )
@@ -69,12 +69,11 @@ class Blades extends Component {
     toggleAccordion3 = () => {
         let slide3 = this.state.switch3;
         let div3 = (
-            <div className="Accordion-content">
-                <h2>How Does it work?</h2>
+            <div className="Accordion-content Description-container cf">
+            <img className="Resize-pic" src="https://i.imgur.com/YKC2VlW.jpg" alt="" /> 
+                <h2>HOW DO I GET RID OF THESE?</h2>
                 <p>
-                    Unlike traditional alcohol-based after-shaves, the Bevel Restoring Balm is a lotion 
-                    that doesn’t dry out the skin or sting. Instead, it provides much-needed hydration 
-                    to help reduce inflammation and help prevent razor bumps.
+                    Every Bevel Razor Blade box includes a compartment for used blades. You can put them there, or in another safe place before disposing. If you've damaged the lid to your box, please be sure to tape it shut so that the blades stay inside the box.
                 </p>
             </div>
         )
@@ -121,8 +120,8 @@ class Blades extends Component {
           )
           
         return (
-            <div>
-               <div className="Carousel">
+            <div className>
+               <div style={{width: '50vw', marginLeft: '25vw'}} className="Carousel">
                 <ImageGallery 
                             items={images}
                             showThumbnails={this.state.showThumbnails}
@@ -131,7 +130,7 @@ class Blades extends Component {
                             />
                </div>
 
-               <div className="Database-info">
+               <div style={{width: '50vw', marginLeft: '25vw'}} className="Database-info">
                     {products}
                </div>
 
@@ -143,7 +142,7 @@ class Blades extends Component {
                <ul className="Accordion-container">
                     <li className="Accordion-item">
                         <a onClick={this.toggleAccordion1} className="Accordion-title">
-                            <h5>Seal, Soothe</h5>
+                            <h5>PRECISION</h5>
                             {this.state.switch1}
                         </a>
 
@@ -156,20 +155,21 @@ class Blades extends Component {
                     </li>
                     <li className="Accordion-item">
                         <a onClick={this.toggleAccordion3} className="Accordion-title">
-                            <h5>The Details</h5>
+                            <h5>DISPOSAL</h5>
                             {this.state.switch3}           
                         </a>
                     </li>
                 </ul>
                </div>
 
-               <div className="Still-video">
-                    <img src={videostill} alt="Still video" className="Video-still" />
-               </div>
-
-               <div className="Advice">
-                    
-               </div>
+               <div className="Container">
+                    <h4 className="Center Sans-font Advice">Get Advice</h4>
+                    <div className="Center-pic">
+                        <img alt="" src={bc93} className="Bc93" />
+                    </div>
+                    <h1 className="Sans-font Font-size">Becoming a Bevel Man: The Shave</h1>
+                    <a className="Read-more" href=""><p>Read the article</p></a>
+                </div>
                <Footer />
             </div>
         );

@@ -12,6 +12,8 @@ import {connect} from 'react-redux';
 import {getProducts} from '../../redux/products';
 import {addToCart} from '../../redux/cart';
 
+import bc93 from '../../assets/bc93.svg';
+
 class ShaveBrush extends Component {
     constructor(props) {
         super(props);
@@ -38,14 +40,11 @@ class ShaveBrush extends Component {
     toggleAccordion1 = () => {
         let slide1 = this.state.switch1;
         let div1 = (
-            <div className="Accordion-content">
-                <h2>Chill Out</h2>
+            <div className="Accordion-content Description-container cf">
+            <img className="Resize-pic" src="https://i.imgur.com/D7tdf2C.jpg" alt="" /> 
+                <h2>IT’S ALL ABOUT THE TECHNIQUE</h2>
                 <p>
-                    Keep your skin happy with the refreshing coolness of our Restoring Balm. 
-                    This lotion helps to reduce shave irritation by using Tea Tree Oil and 
-                    Witch Hazel to calm your skin. Lactic and Salicylic Acids help exfoliate 
-                    and even your complexion, while Shea Butter helps moisturize and reduce 
-                    blemishes. Full list of ingredients.
+                    This is where the magic happens. With the right wrist action, you’ll spread a proper lather across your face to become a new man. Using premium-grade badger hair, this brush helps to gently exfoliate and lift hair for an effortless shave.
                 </p>
             </div>
         );
@@ -55,12 +54,11 @@ class ShaveBrush extends Component {
     toggleAccordion2 = () => {
         let slide2 = this.state.switch2;
         let div2 = (
-            <div className="Accordion-content">
-                <h2>How Do I Use It?</h2>
+              <div className="Accordion-content Description-container cf">
+              <img className="Resize-pic" src="https://i.imgur.com/4xJCmWv.jpg" alt="" /> 
+                <h2>HOW DO I USE IT?</h2>
                 <p>
-                    After shaving, rinse your skin with cold water to close your pores. Don’t rub. 
-                    Instead, gently pat dry with a clean towel. Rub a nickel-sized amount of 
-                    Restoring Balm into your skin.
+                    Start by soaking your brush bristles in hot running water for about 20 seconds. Give it one strong flick to remove excess water. Squeeze a nickel-sized amount of shave cream onto the brush. Apply the shave cream in a strong circular motion. It takes a few months of regular use for any badger brush to break in. Slight hair shedding and softened brush tips are natural for badger brushes.
                 </p>
             </div>
         )
@@ -70,12 +68,11 @@ class ShaveBrush extends Component {
     toggleAccordion3 = () => {
         let slide3 = this.state.switch3;
         let div3 = (
-            <div className="Accordion-content">
-                <h2>How Does it work?</h2>
+            <div className="Accordion-content Description-container cf">
+            <img className="Resize-pic" src="https://i.imgur.com/mE0mF3m.jpg" alt="" /> 
+                <h2>HOW DO I CLEAN IT?</h2>
                 <p>
-                    Unlike traditional alcohol-based after-shaves, the Bevel Restoring Balm is a lotion 
-                    that doesn’t dry out the skin or sting. Instead, it provides much-needed hydration 
-                    to help reduce inflammation and help prevent razor bumps.
+                    It’s pretty simple: after shaving, rinse your Bevel Brush with hot water until all lather has been removed. Then, do a final rinse with cold water. For deeper cleaning, you can use a gentle shampoo.
                 </p>
             </div>
         )
@@ -126,7 +123,7 @@ class ShaveBrush extends Component {
           
         return (
             <div>
-               <div className="Carousel">
+                <div style={{width: '50vw', marginLeft: '25vw'}} className="Carousel">
                     <ImageGallery 
                         items={images}
                         showThumbnails={this.state.showThumbnails}
@@ -135,7 +132,7 @@ class ShaveBrush extends Component {
                          />
                </div>
 
-               <div className="Database-info">
+                <div style={{width: '50vw', marginLeft: '25vw'}} className="Database-info">
                     {products}
                </div>
 
@@ -167,13 +164,14 @@ class ShaveBrush extends Component {
                 </ul>
                </div>
 
-               <div className="Still-video">
-                    <img src={videostill} alt="Still video" className="Video-still" />
-               </div>
-
-               <div className="Advice">
-                    
-               </div>
+                <div className="Container">
+                    <h4 className="Center Sans-font Advice">Get Advice</h4>
+                    <div className="Center-pic">
+                        <img alt="" src={bc93} className="Bc93" />
+                    </div>
+                    <h1 className="Sans-font Font-size">Becoming a Bevel Man: The Shave</h1>
+                    <a className="Read-more" href=""><p>Read the article</p></a>
+                </div>
 
                 <Footer />
             </div>

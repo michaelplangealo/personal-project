@@ -8,8 +8,8 @@ import Product from './components/Products/Product';
 import Login from './components/Login/Login';
 import Subscription from './components/Subscription/Subscription';
 import SafetyRazor from './components/SafetyRazor/SafetyRazor';
-// import StarterKit from './components/Shave/StarterKit';
-// import GiftCard from './components/Shave/GiftCard';
+import StarterKit from './components/StarterKit/StarterKit';
+import GiftCard from './components/GiftCard/GiftCard';
 import Blades from './components/Blades/Blades';
 import StoreLanding from './components/Shave/ShaveLanding';
 import ShaveCream from './components/ShaveCream/ShaveCream';
@@ -34,6 +34,8 @@ export default (
                     <Route path="/shave/shave-brush" component={ShaveBrush} />
                     <Route path="/shave/safety-razor" component={SafetyRazor} />
                     <Route path="/shave/priming-oil" component={PrimingOil} />
+                    <Route path="/shave/starter-kit" component={StarterKit} />
+                    <Route path="/shave/gift-card" component={GiftCard} />                    
                     <Route component={Shave} />
                 </Switch>
             </StoreLanding>
