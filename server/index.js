@@ -18,7 +18,7 @@ const {
     SESSION_SECRET
 } = process.env;
 
-const bcrypt = require ('bcrypt-nodejs');
+const bcrypt = require ('bcrypt');
 
 const app = express();
 app.use(express.static(`${__dirname}/../build`))
