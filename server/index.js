@@ -14,7 +14,8 @@ const path = require("path")
 
 const {
     CONNECTION_STRING,
-    STRIPE_SECRET
+    STRIPE_SECRET,
+    SESSION_SECRET
 } = process.env;
 
 const bcrypt = require ('bcrypt');
@@ -28,7 +29,7 @@ app.set("bcrypt", bcrypt);
 
 app.use( 
     session({
-        secret: CONNECTION_STRING,
+        secret: SESSION_SECRET,
         resave: false, 
         saveUninitialized: false
     })
