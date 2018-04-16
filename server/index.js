@@ -1,4 +1,3 @@
-require('dotenv').config();
 const express = require('express');
 const {json} = require('body-parser');
 const cors = require('cors');
@@ -10,6 +9,7 @@ const cart = require('./controller/cart');
 const products = require('./controller/products');
 const payment = require('./controller/payment');
 const path = require("path")
+require('dotenv').config();
 
 
 const {
@@ -18,7 +18,7 @@ const {
     SESSION_SECRET
 } = process.env;
 
-const bcrypt = require ('bcrypt');
+const bcrypt = require ('bcrypt-nodejs');
 
 const app = express();
 app.use(express.static(`${__dirname}/../build`))
